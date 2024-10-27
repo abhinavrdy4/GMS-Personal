@@ -2,52 +2,10 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
   MapPin, Calendar, Clock, Users, Share2, Heart,
-  Facebook, Twitter, Linkedin, Mail, Download,
+  Facebook, Twitter, Linkedin, Mail,
   ChevronDown, ChevronUp, Ticket, Info
 } from 'lucide-react';
-
-const event = {
-  id: 1,
-  title: 'Summer Music Festival 2024',
-  image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1500&q=80',
-  date: 'August 15, 2024',
-  time: '4:00 PM - 11:00 PM',
-  location: 'Central Park Amphitheater',
-  address: '123 Park Avenue, New York, NY 10022',
-  category: 'Music',
-  attendees: 234,
-  price: '$49.99',
-  description: `Join us for an unforgettable evening of live music under the stars at Central Park's iconic amphitheater. 
-                This year's Summer Music Festival brings together an eclectic mix of genres, from indie rock to electronic, 
-                featuring both established artists and emerging talents.`,
-  schedule: [
-    { time: '4:00 PM', activity: 'Gates Open' },
-    { time: '5:00 PM', activity: 'Opening Act: The Melodics' },
-    { time: '6:30 PM', activity: 'Main Performance: Stellar Dreams' },
-    { time: '8:00 PM', activity: 'Headliner: Electric Pulse' },
-    { time: '10:30 PM', activity: 'Closing Ceremony' }
-  ],
-  faqs: [
-    {
-      question: 'What items are prohibited?',
-      answer: 'Outside food and drinks, professional cameras, and recording equipment are not allowed.'
-    },
-    {
-      question: 'Is there parking available?',
-      answer: 'Yes, paid parking is available at the Central Park Garage.'
-    },
-    {
-      question: 'What happens if it rains?',
-      answer: 'The event will proceed rain or shine. In case of severe weather, updates will be posted on our social media.'
-    }
-  ],
-  accessibility: 'Wheelchair accessible. ASL interpreters available upon request.',
-  organizer: {
-    name: 'Cityscape Events',
-    email: 'info@cityscapeevents.com',
-    phone: '(555) 123-4567'
-  }
-};
+import { getEventById } from '../data/events';
 
 export const EventDetails = () => {
   const { id } = useParams();
@@ -55,6 +13,24 @@ export const EventDetails = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [showShareMenu, setShowShareMenu] = useState(false);
+
+  const event = getEventById(Number(id));
+
+  if (!event) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-700 mb-4">Event Not Found</h2>
+          <button 
+            onClick={() => navigate('/')}
+            className="btn btn-primary"
+          >
+            Return Home
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const shareLinks = [
     { icon: Facebook, label: 'Facebook', color: 'hover:text-blue-600' },
@@ -76,7 +52,7 @@ export const EventDetails = () => {
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="max-w-7xl mx-auto">
             <span className="inline-block px-4 py-1.5 rounded-full glass-card text-sm font-medium mb-4">
-              {event.category}
+              {event.categories?.[0] || event.category}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {event.title}
@@ -152,48 +128,52 @@ export const EventDetails = () => {
             </div>
 
             {/* Schedule */}
-            <div className="glass-card rounded-xl p-6 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Event Schedule</h2>
-              <div className="space-y-4">
-                {event.schedule.map(({ time, activity }, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-white/40 transition-colors"
-                  >
-                    <div className="w-24 font-medium text-purple-600">{time}</div>
-                    <div className="flex-1">{activity}</div>
-                  </div>
-                ))}
+            {event.schedule && (
+              <div className="glass-card rounded-xl p-6 mb-8">
+                <h2 className="text-2xl font-bold mb-4">Event Schedule</h2>
+                <div className="space-y-4">
+                  {event.schedule.map(({ time, activity }, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-start gap-4 p-4 rounded-lg hover:bg-white/40 transition-colors"
+                    >
+                      <div className="w-24 font-medium text-purple-600">{time}</div>
+                      <div className="flex-1">{activity}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* FAQs */}
-            <div className="glass-card rounded-xl p-6">
-              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-              <div className="space-y-2">
-                {event.faqs.map(({ question, answer }, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden">
-                    <button
-                      className="w-full flex items-center justify-between p-4 text-left font-medium
-                                hover:bg-white/40 transition-colors"
-                      onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
-                    >
-                      {question}
-                      {expandedFaq === index ? (
-                        <ChevronUp className="w-5 h-5 flex-shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 flex-shrink-0" />
+            {event.faqs && (
+              <div className="glass-card rounded-xl p-6">
+                <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                <div className="space-y-2">
+                  {event.faqs.map(({ question, answer }, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden">
+                      <button
+                        className="w-full flex items-center justify-between p-4 text-left font-medium
+                                  hover:bg-white/40 transition-colors"
+                        onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                      >
+                        {question}
+                        {expandedFaq === index ? (
+                          <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                        )}
+                      </button>
+                      {expandedFaq === index && (
+                        <div className="p-4 pt-0 text-gray-700">
+                          {answer}
+                        </div>
                       )}
-                    </button>
-                    {expandedFaq === index && (
-                      <div className="p-4 pt-0 text-gray-700">
-                        {answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Right Column */}
@@ -210,20 +190,30 @@ export const EventDetails = () => {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium mb-2">Location</h4>
-                  <p className="text-gray-700">{event.address}</p>
+                  <p className="text-gray-700">{event.location}</p>
                 </div>
-                <div>
-                  <h4 className="font-medium mb-2">Accessibility</h4>
-                  <p className="text-gray-700">{event.accessibility}</p>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Contact Organizer</h4>
-                  <div className="text-gray-700">
-                    <p>{event.organizer.name}</p>
-                    <p>{event.organizer.email}</p>
-                    <p>{event.organizer.phone}</p>
+                {event.accessibility && (
+                  <div>
+                    <h4 className="font-medium mb-2">Accessibility</h4>
+                    <p className="text-gray-700">{event.accessibility}</p>
                   </div>
-                </div>
+                )}
+                {(event.instructor || event.contact || event.organizer) && (
+                  <div>
+                    <h4 className="font-medium mb-2">Contact Information</h4>
+                    <div className="text-gray-700">
+                      {event.instructor && <p>Instructor: {event.instructor}</p>}
+                      {event.contact && <p>Contact: {event.contact}</p>}
+                      {event.organizer && (
+                        <>
+                          <p>{event.organizer.name}</p>
+                          <p>{event.organizer.email}</p>
+                          <p>{event.organizer.phone}</p>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -1,73 +1,7 @@
 import React from 'react';
 import { MapPin, Calendar, Heart, Users, Clock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
-const events = [
-  {
-    id: 1,
-    title: 'Summer Music Festival',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 15',
-    time: '4:00 PM',
-    location: 'Central Park',
-    category: 'Music',
-    attendees: 234
-  },
-  {
-    id: 2,
-    title: 'Art & Wine Evening',
-    image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 18',
-    time: '7:00 PM',
-    location: 'Downtown Gallery',
-    category: 'Art',
-    attendees: 89
-  },
-  {
-    id: 3,
-    title: 'Poetry Slam Night',
-    image: 'https://images.unsplash.com/photo-1525296335429-d479c92dd17a?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 20',
-    time: '8:00 PM',
-    location: 'The Coffee House',
-    category: 'Poetry',
-    attendees: 56
-  },
-  {
-    id: 4,
-    title: 'Photography Workshop',
-    image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 22',
-    time: '10:00 AM',
-    location: 'Creative Studio',
-    category: 'Workshops',
-    attendees: 45
-  },
-  {
-    id: 5,
-    title: 'Bhangra Dance Workshop',
-    image: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 25',
-    time: '6:30 PM',
-    location: 'Dance Studio',
-    categories: ['Dance', 'Workshops'],
-    attendees: 123,
-    description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
-    price: '$35',
-    instructor: 'Priya Singh',
-    contact: 'priya@dancestudio.com'
-  },
-  {
-    id: 6,
-    title: 'Street Photography Walk',
-    image: 'https://images.unsplash.com/photo-1502471602546-17554aac1160?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 27',
-    time: '9:00 AM',
-    location: 'City Center',
-    category: 'Photography',
-    attendees: 67
-  },
-];
+import { events } from '../data/events';
 
 interface EventsGridProps {
   category?: string;
@@ -78,7 +12,7 @@ export const EventsGrid = ({ category }: EventsGridProps) => {
   const filteredEvents = category 
     ? events.filter(event => 
         'categories' in event 
-          ? event.categories.includes(category)
+          ? event.categories?.includes(category)
           : event.category === category
       )
     : events;

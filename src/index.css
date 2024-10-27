@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100 touch-pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Improved tap targets for mobile */
+  button, a {
+    @apply touch-manipulation;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200
+           active:scale-95 sm:px-4 sm:py-2;
+  }
+  
+  .btn-primary {
+    @apply bg-purple-600 text-white hover:bg-purple-700 
+           focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+           active:bg-purple-800;
+  }
+
+  .glass-card {
+    @apply bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-md 
+           border border-white/30 shadow-xl;
+  }
+
+  /* Mobile-optimized containers */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto;
+  }
+
+  /* Mobile-friendly touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  .glass-card {
+    @apply backdrop-blur-sm; /* Reduced blur for better performance */
+  }
+}

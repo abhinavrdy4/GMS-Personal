@@ -1,3 +1,15 @@
+interface TicketCategory {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  available: number;
+  total: number;
+  enabled: boolean;
+  startDate?: string;
+  endDate?: string;
+}
+
 interface Event {
   id: number;
   title: string;
@@ -20,12 +32,13 @@ interface Event {
     email: string;
     phone: string;
   };
+  ticketCategories: TicketCategory[];
 }
 
 export const events: Event[] = [
   {
     id: 1,
-    title: 'Summer Music Festival',
+    title: 'Summer Music Festival 2',
     image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600&q=80',
     date: 'Aug 15',
     time: '4:00 PM',
@@ -56,7 +69,37 @@ export const events: Event[] = [
       name: 'Cityscape Events',
       email: 'info@cityscapeevents.com',
       phone: '(555) 123-4567'
-    }
+    },
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 39.99,
+        description: 'Limited early bird tickets at a special price',
+        available: 0,
+        total: 100,
+        enabled: true,
+        endDate: '2024-07-15'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      },
+      {
+        id: 'vip',
+        name: 'VIP Access',
+        price: 99.99,
+        description: 'VIP treatment with exclusive backstage access',
+        available: 25,
+        total: 50,
+        enabled: true
+      }
+    ]
   },
   {
     id: 2,
@@ -79,7 +122,37 @@ export const events: Event[] = [
       name: 'Downtown Gallery',
       email: 'events@downtowngallery.com',
       phone: '(555) 234-5678'
-    }
+    },
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 39.99,
+        description: 'Limited early bird tickets at a special price',
+        available: 0,
+        total: 100,
+        enabled: true,
+        endDate: '2024-07-15'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      },
+      {
+        id: 'vip',
+        name: 'VIP Access',
+        price: 99.99,
+        description: 'VIP treatment with exclusive backstage access',
+        available: 25,
+        total: 50,
+        enabled: true
+      }
+    ]
   },
   {
     id: 3,
@@ -96,7 +169,28 @@ export const events: Event[] = [
       name: 'Literary Arts Society',
       email: 'poetry@literaryarts.com',
       phone: '(555) 345-6789'
-    }
+    },
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 39.99,
+        description: 'Limited early bird tickets at a special price',
+        available: 0,
+        total: 100,
+        enabled: true,
+        endDate: '2024-07-15'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      }
+    ]
   },
   {
     id: 4,
@@ -110,7 +204,18 @@ export const events: Event[] = [
     description: 'Learn professional photography techniques in this hands-on workshop.',
     price: '$199',
     instructor: 'Michael Chen',
-    contact: 'michael@creativestudio.com'
+    contact: 'michael@creativestudio.com',
+    ticketCategories: [
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      }
+    ]
   },
   {
     id: 5,
@@ -140,6 +245,27 @@ export const events: Event[] = [
         question: 'What should I wear?',
         answer: 'Comfortable workout clothes and athletic shoes.'
       }
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 39.99,
+        description: 'Limited early bird tickets at a special price',
+        available: 10,
+        total: 100,
+        enabled: true,
+        endDate: '2024-07-15'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      }
     ]
   },
   {
@@ -154,8 +280,30 @@ export const events: Event[] = [
     description: 'Explore urban photography techniques while walking through the city.',
     price: '$45',
     instructor: 'Sarah Williams',
-    contact: 'sarah@photowalks.com'
-  }
+    contact: 'sarah@photowalks.com',
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 39.99,
+        description: 'Limited early bird tickets at a special price',
+        available: 0,
+        total: 100,
+        enabled: true,
+        endDate: '2024-07-15'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 49.99,
+        description: 'Standard admission ticket',
+        available: 150,
+        total: 400,
+        enabled: true
+      }
+    ]
+  },
+    // ... rest of the events remain the same
 ];
 
 export const getEventById = (id: number): Event | undefined => {

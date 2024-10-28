@@ -3,9 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { 
   MapPin, Calendar, Clock, Users, Share2, Heart,
   Facebook, Twitter, Linkedin, Mail,
-  ChevronDown, ChevronUp, Ticket, Info
+  ChevronDown, ChevronUp, Info
 } from 'lucide-react';
 import { getEventById } from '../data/events';
+import { TicketCategories } from '../components/TicketCategories';
 
 export const EventDetails = () => {
   const { id } = useParams();
@@ -38,6 +39,11 @@ export const EventDetails = () => {
     { icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-700' },
     { icon: Mail, label: 'Email', color: 'hover:text-red-500' }
   ];
+
+  const handleTicketSelect = (categoryId: string) => {
+    // Handle ticket selection (to be implemented)
+    console.log('Selected ticket category:', categoryId);
+  };
 
   return (
     <div className="min-h-screen pb-12">
@@ -86,10 +92,6 @@ export const EventDetails = () => {
           <div className="flex-1">
             {/* Action Buttons */}
             <div className="flex gap-4 mb-8">
-              <button className="flex-1 btn btn-primary">
-                <Ticket className="w-5 h-5 mr-2" />
-                Get Tickets
-              </button>
               <div className="relative">
                 <button 
                   className="p-3 rounded-lg glass-card hover:bg-white/40 transition-colors"
@@ -177,43 +179,43 @@ export const EventDetails = () => {
           </div>
 
           {/* Right Column */}
-          <div className="lg:w-80">
+          <div className="lg:w-[400px]">
             <div className="glass-card rounded-xl p-6 sticky top-24">
-              <div className="flex items-baseline justify-between mb-4">
-                <h3 className="text-xl font-bold">Ticket Price</h3>
-                <span className="text-2xl font-bold text-purple-600">{event.price}</span>
-              </div>
-              <button className="w-full btn btn-primary mb-6">
-                <Ticket className="w-5 h-5 mr-2" />
-                Get Tickets
-              </button>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-medium mb-2">Location</h4>
-                  <p className="text-gray-700">{event.location}</p>
-                </div>
-                {event.accessibility && (
+              <h3 className="text-xl font-bold mb-6">Select Tickets</h3>
+              <TicketCategories
+                categories={event.ticketCategories}
+                onSelectTicket={handleTicketSelect}
+              />
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium mb-2">Accessibility</h4>
-                    <p className="text-gray-700">{event.accessibility}</p>
+                    <h4 className="font-medium mb-2">Location</h4>
+                    <p className="text-gray-700">{event.location}</p>
                   </div>
-                )}
-                {(event.instructor || event.contact || event.organizer) && (
-                  <div>
-                    <h4 className="font-medium mb-2">Contact Information</h4>
-                    <div className="text-gray-700">
-                      {event.instructor && <p>Instructor: {event.instructor}</p>}
-                      {event.contact && <p>Contact: {event.contact}</p>}
-                      {event.organizer && (
-                        <>
-                          <p>{event.organizer.name}</p>
-                          <p>{event.organizer.email}</p>
-                          <p>{event.organizer.phone}</p>
-                        </>
-                      )}
+                  {event.accessibility && (
+                    <div>
+                      <h4 className="font-medium mb-2">Accessibility</h4>
+                      <p className="text-gray-700">{event.accessibility}</p>
                     </div>
-                  </div>
-                )}
+                  )}
+                  {(event.instructor || event.contact || event.organizer) && (
+                    <div>
+                      <h4 className="font-medium mb-2">Contact Information</h4>
+                      <div className="text-gray-700">
+                        {event.instructor && <p>Instructor: {event.instructor}</p>}
+                        {event.contact && <p>Contact: {event.contact}</p>}
+                        {event.organizer && (
+                          <>
+                            <p>{event.organizer.name}</p>
+                            <p>{event.organizer.email}</p>
+                            <p>{event.organizer.phone}</p>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

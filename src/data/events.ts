@@ -156,27 +156,40 @@ export const events: Event[] = [
   },
   {
     id: 3,
-    title: 'Poetry Slam Night',
-    image: 'https://images.unsplash.com/photo-1525296335429-d479c92dd17a?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 20',
-    time: '8:00 PM',
-    location: 'The Coffee House',
-    category: 'Poetry',
-    attendees: 56,
-    description: 'Join us for an evening of powerful spoken word performances.',
-    price: '$15',
-    organizer: {
-      name: 'Literary Arts Society',
-      email: 'poetry@literaryarts.com',
-      phone: '(555) 345-6789'
-    },
+    title: 'Paiya Dei by Bharath',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_8640.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Aug 25',
+    time: '6:30 PM',
+    location: 'Good Moce Studio',
+    categories: ['Dance', 'Workshops'],
+    attendees: 22,
+    description: 'Join us for a vibrant dance session inspired by the energetic beats of "Paiya Dei"! Open to all levels, this workshop blends expressive choreography, rhythmic footwork, and cultural insights.',
+    price: '$35',
+    instructor: 'Bharath',
+    contact: 'goodmovestudios@gmail.com',
+    schedule: [
+      { time: '6:30 PM', activity: 'Warm-up' },
+      { time: '7:00 PM', activity: 'Basic Steps' },
+      { time: '8:00 PM', activity: 'Choreography' },
+      { time: '8:45 PM', activity: 'Cool-down' }
+    ],
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed! This workshop is suitable for all levels.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Comfortable workout clothes and athletic shoes.'
+      }
+    ],
     ticketCategories: [
       {
         id: 'early-bird',
         name: 'Early Bird',
         price: 39.99,
         description: 'Limited early bird tickets at a special price',
-        available: 0,
+        available: 10,
         total: 100,
         enabled: true,
         endDate: '2024-07-15'

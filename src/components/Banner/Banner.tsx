@@ -19,10 +19,10 @@ const bannerData = [
   },
   {
     id: 3,
-    title: 'Poetry Under the Stars',
-    image: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1500&q=80',
+    title: 'Paiya Dei by Bharath',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_8640.PNG?auto=format&fit=crop&w=1500&q=80',
     date: 'August 20, 2024',
-    location: 'Riverside Gardens',
+    location: 'Good Move Studios',
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const bannerData = [
     title: 'Bhangra Masterclass',
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=1500&q=80',
     date: 'August 22, 2024',
-    location: 'Good Move Studio',
+    location: 'Good Move Studios',
   },
 ];
 

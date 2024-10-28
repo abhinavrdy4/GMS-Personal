@@ -31,6 +31,13 @@ const bannerData = [
     date: 'August 22, 2024',
     location: 'Creative Studio',
   },
+  {
+    id: 5,
+    title: 'Bhangra Masterclass',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=1500&q=80',
+    date: 'August 22, 2024',
+    location: 'Good Move Studio',
+  },
 ];
 
 export const Banner = () => {

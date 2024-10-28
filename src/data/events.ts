@@ -115,7 +115,7 @@ export const events: Event[] = [
   {
     id: 5,
     title: 'Bhangra Dance Workshop',
-    image: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=600&q=80',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Aug 25',
     time: '6:30 PM',
     location: 'Dance Studio',

@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Music2, Palette, Mic2, HeartHandshake, Camera, Music4 } from 'lucide-react';
+import { Shuffle, Repeat, ToyBrick, Dumbbell, Palette } from 'lucide-react';
 
 const categories = [
-  { name: 'Music', icon: Music2, color: 'from-pink-500 to-rose-500', gradient: 'pink-to-rose' },
-  { name: 'Art', icon: Palette, color: 'from-purple-500 to-indigo-500', gradient: 'purple-to-indigo' },
-  { name: 'Poetry', icon: Mic2, color: 'from-blue-500 to-cyan-500', gradient: 'blue-to-cyan' },
-  { name: 'Workshops', icon: HeartHandshake, color: 'from-green-500 to-emerald-500', gradient: 'green-to-emerald' },
-  { name: 'Dance', icon: Music4, color: 'from-yellow-500 to-orange-500', gradient: 'yellow-to-orange' },
-  { name: 'Photography', icon: Camera, color: 'from-red-500 to-pink-500', gradient: 'red-to-pink' },
+  { name: 'Workshops', icon: Shuffle, color: 'from-green-500 to-emerald-500', gradient: 'green-to-emerald' },
+  { name: 'Regulars', icon: Repeat, color: 'from-yellow-500 to-orange-500', gradient: 'yellow-to-orange' },
+  { name: 'Kids', icon: ToyBrick, color: 'from-red-500 to-pink-500', gradient: 'red-to-pink' },
+  { name: 'Fitness', icon: Dumbbell, color: 'from-blue-500 to-cyan-500', gradient: 'blue-to-cyan' },
+  { name: 'Art & Craft', icon: Palette, color: 'from-pink-500 to-rose-500', gradient: 'pink-to-rose' },
+  
 ];
 
 export const Categories = () => {

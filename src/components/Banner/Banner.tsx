@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { BannerSlide } from './BannerSlide';
 import { BannerControls } from './BannerControls';
 import { useEvents } from '../../hooks/useEvents';
-import { isWorkshop } from '../../utils/eventUtils';
 
 export const Banner = () => {
-  const { workshops, regularClasses } = useEvents();
+  const { featuredWorkshops, featuredClasses } = useEvents();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -14,14 +12,14 @@ export const Banner = () => {
   const slideRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Combine and format featured items
+  // Combine featured items
   const featuredItems = [
-    ...workshops.slice(0, 2).map(workshop => ({
+    ...featuredWorkshops.map(workshop => ({
       ...workshop,
       path: `/workshop/${workshop.id}`,
       subtitle: workshop.date
     })),
-    ...regularClasses.slice(0, 2).map(class_ => ({
+    ...featuredClasses.map(class_ => ({
       ...class_,
       path: `/class/${class_.id}`,
       subtitle: `${class_.schedule.frequency} Classes`
@@ -78,6 +76,10 @@ export const Banner = () => {
     return () => clearInterval(timer);
   }, [isAutoPlaying, nextSlide]);
 
+  if (featuredItems.length === 0) {
+    return null;
+  }
+
   return (
     <div 
       ref={containerRef}
@@ -102,7 +104,7 @@ export const Banner = () => {
             location={item.location}
             categories={item.categories}
             path={item.path}
-            type={isWorkshop(item) ? 'workshop' : 'class'}
+            type={item.type}
           />
         ))}
       </div>

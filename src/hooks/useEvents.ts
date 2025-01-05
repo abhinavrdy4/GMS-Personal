@@ -18,10 +18,22 @@ export const useEvents = (category?: string) => {
     [events]
   );
 
+  const featuredWorkshops = useMemo(() => 
+    workshops.filter(workshop => workshop.featured),
+    [workshops]
+  );
+
+  const featuredClasses = useMemo(() => 
+    regularClasses.filter(class_ => class_.featured),
+    [regularClasses]
+  );
+
   return {
     events,
     workshops,
     regularClasses,
+    featuredWorkshops,
+    featuredClasses,
     total: events.length,
     workshopsCount: workshops.length,
     regularClassesCount: regularClasses.length,

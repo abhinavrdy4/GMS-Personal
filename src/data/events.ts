@@ -160,7 +160,7 @@ export const events: Event[] = [
     image: 'https://storage.googleapis.com/cityvibe/IMG_8640.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Aug 25',
     time: '6:30 PM',
-    location: 'Good Moce Studio',
+    location: 'Good Move Studio',
     categories: ['Kids', 'Workshops'],
     attendees: 22,
     description: 'Join us for a vibrant dance session inspired by the energetic beats of "Paiya Dei"! Open to all levels, this workshop blends expressive choreography, rhythmic footwork, and cultural insights.',

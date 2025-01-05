@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MapPin, Calendar, Clock, Users } from 'lucide-react';
 import type { Event } from '../../types/events';
+import { isWorkshop } from '../../utils/eventUtils';
 
 interface EventCardProps {
   event: Event;
@@ -9,10 +10,10 @@ interface EventCardProps {
 
 export const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const navigate = useNavigate();
-  const isWorkshop = event.type === 'workshop';
+  const workshop = isWorkshop(event);
 
   const handleClick = () => {
-    const path = isWorkshop ? `/event/${event.id}` : `/class/${event.id}`;
+    const path = workshop ? `/workshop/${event.id}` : `/class/${event.id}`;
     navigate(path);
   };
 
@@ -45,7 +46,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
           {event.title}
         </h3>
         <div className="space-y-2">
-          {isWorkshop ? (
+          {workshop ? (
             <div className="flex items-center gap-4 text-sm text-gray-700">
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
@@ -71,7 +72,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
             </div>
             <div className="flex items-center gap-1.5">
               <Users className="w-4 h-4" />
-              {isWorkshop ? event.attendees : `${event.attendees}/${event.maxCapacity}`}
+              {workshop ? event.attendees : `${event.attendees}/${event.maxCapacity}`}
             </div>
           </div>
         </div>

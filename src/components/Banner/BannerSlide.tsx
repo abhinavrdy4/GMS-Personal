@@ -5,12 +5,22 @@ import { useNavigate } from 'react-router-dom';
 interface BannerSlideProps {
   image: string;
   title: string;
-  date: string;
+  subtitle: string;
   location: string;
-  eventId: number;
+  categories: string[];
+  path: string;
+  type: 'workshop' | 'class';
 }
 
-export const BannerSlide = ({ image, title, date, location, eventId }: BannerSlideProps) => {
+export const BannerSlide = ({ 
+  image, 
+  title, 
+  subtitle,
+  location,
+  categories,
+  path,
+  type
+}: BannerSlideProps) => {
   const navigate = useNavigate();
 
   return (
@@ -27,6 +37,16 @@ export const BannerSlide = ({ image, title, date, location, eventId }: BannerSli
       <div className="absolute inset-0 flex items-center">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-8">
           <div className="max-w-2xl">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {categories.map(category => (
+                <span key={category} className="px-4 py-1.5 rounded-full glass-card text-sm font-medium">
+                  {category}
+                </span>
+              ))}
+              <span className="px-4 py-1.5 rounded-full glass-card text-sm font-medium capitalize">
+                {type}
+              </span>
+            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 
                          leading-tight">
               {title}
@@ -34,7 +54,7 @@ export const BannerSlide = ({ image, title, date, location, eventId }: BannerSli
             <div className="flex flex-wrap gap-4 text-white/90 mb-6 text-sm sm:text-base">
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                {date}
+                {subtitle}
               </div>
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -42,13 +62,13 @@ export const BannerSlide = ({ image, title, date, location, eventId }: BannerSli
               </div>
             </div>
             <button
-              onClick={() => navigate(`/event/${eventId}`)}
+              onClick={() => navigate(path)}
               className="w-full sm:w-auto btn btn-primary bg-white/20 hover:bg-white/30 backdrop-blur-sm
                        border border-white/30 shadow-lg hover:shadow-xl transform 
                        hover:-translate-y-0.5 transition-all duration-300
                        text-base"
             >
-              Book Now
+              {type === 'workshop' ? 'Book Now' : 'Join Class'}
             </button>
           </div>
         </div>

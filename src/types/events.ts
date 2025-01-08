@@ -1,17 +1,4 @@
-export interface TicketCategory {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  enabled: boolean;
-  endDate?: string;
-}
-
-export interface FAQ {
-  question: string;
-  answer: string;
-}
-
+// Update the Workshop interface to use instagramStoryUrl instead of handle
 export interface Workshop {
   id: number;
   type: 'workshop';
@@ -20,9 +7,11 @@ export interface Workshop {
   date: string;
   time: string;
   location: string;
+  locationUrl?: string;
+  locationDescription?: string;
+  instagramStoryUrl?: string; // Changed from instagramHandle
   categories: string[];
   featured?: boolean;
-  attendees: number;
   description: string;
   price: string;
   instructor?: string;
@@ -30,5 +19,3 @@ export interface Workshop {
   faqs?: FAQ[];
   ticketCategories: TicketCategory[];
 }
-
-// Rest of the file remains the same...

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
-  MapPin, Calendar, Clock, Share2, Heart,
-  Facebook, Twitter, Linkedin, Mail,
-  ChevronDown, ChevronUp
+  MapPin, Calendar, Clock, Users, Share2, Heart,
+  ChevronDown, ChevronUp, Instagram
 } from 'lucide-react';
 import { eventService } from '../services/eventService';
 import { TicketCategories } from '../components/TicketCategories';
@@ -33,13 +32,6 @@ export const WorkshopDetails = () => {
     );
   }
 
-  const shareLinks = [
-    { icon: Facebook, label: 'Facebook', color: 'hover:text-blue-600' },
-    { icon: Twitter, label: 'Twitter', color: 'hover:text-blue-400' },
-    { icon: Linkedin, label: 'LinkedIn', color: 'hover:text-blue-700' },
-    { icon: Mail, label: 'Email', color: 'hover:text-red-500' }
-  ];
-
   const handleTicketSelect = (categoryId: string) => {
     console.log('Selected ticket category:', categoryId);
   };
@@ -58,7 +50,7 @@ export const WorkshopDetails = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-2 mb-4">
               {workshop.categories.map(category => (
-                <span key={category} className="inline-block px-4 py-1.5 rounded-full glass-card text-sm font-medium">
+                <span key={category} className="px-4 py-1.5 rounded-full glass-card text-sm font-medium">
                   {category}
                 </span>
               ))}
@@ -75,10 +67,38 @@ export const WorkshopDetails = () => {
                 <Clock className="w-5 h-5" />
                 {workshop.time}
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
-                {workshop.location}
-              </div>
+              {workshop.locationUrl ? (
+                <a
+                  href={workshop.locationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-white transition-colors group"
+                >
+                  <MapPin className="w-5 h-5" />
+                  <span>{workshop.location}</span>
+                  {workshop.locationDescription && (
+                    <span className="hidden group-hover:inline text-sm opacity-80">
+                      - {workshop.locationDescription}
+                    </span>
+                  )}
+                </a>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5" />
+                  {workshop.location}
+                </div>
+              )}
+              {workshop.instagramStoryUrl && (
+                <a 
+                  href={workshop.instagramStoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  View Story
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -91,31 +111,15 @@ export const WorkshopDetails = () => {
           <div className="flex-1">
             {/* Action Buttons */}
             <div className="flex gap-4 mb-8">
-              <div className="relative">
-                <button 
-                  className="p-3 rounded-lg glass-card hover:bg-white/40 transition-colors"
-                  onClick={() => setShowShareMenu(!showShareMenu)}
-                >
-                  <Share2 className="w-5 h-5" />
-                </button>
-                {showShareMenu && (
-                  <div className="absolute right-0 mt-2 w-48 glass-card rounded-lg shadow-xl z-10">
-                    {shareLinks.map(({ icon: Icon, label, color }) => (
-                      <button
-                        key={label}
-                        className={`w-full flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-white/40 
-                                  first:rounded-t-lg last:rounded-b-lg ${color}`}
-                      >
-                        <Icon className="w-5 h-5" />
-                        {label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <button 
+                className="p-3 rounded-lg glass-card hover:bg-white/40 transition-colors"
+                onClick={() => setShowShareMenu(!showShareMenu)}
+              >
+                <Share2 className="w-5 h-5" />
+              </button>
               <button 
                 className={`p-3 rounded-lg glass-card hover:bg-white/40 transition-colors
-                          ${isLiked ? 'text-pink-500' : 'text-gray-700'}`}
+                        ${isLiked ? 'text-pink-500' : 'text-gray-700'}`}
                 onClick={() => setIsLiked(!isLiked)}
               >
                 <Heart className="w-5 h-5" fill={isLiked ? 'currentColor' : 'none'} />
@@ -147,7 +151,7 @@ export const WorkshopDetails = () => {
             )}
 
             {/* FAQs */}
-            {workshop.faqs && workshop.faqs.length > 0 && (
+            {workshop.faqs && (
               <div className="glass-card rounded-xl p-6">
                 <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
                 <div className="space-y-2">
@@ -186,20 +190,12 @@ export const WorkshopDetails = () => {
                 onSelectTicket={handleTicketSelect}
               />
 
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium mb-2">Location</h4>
-                    <p className="text-gray-700">{workshop.location}</p>
-                  </div>
-                  {workshop.instructor && (
-                    <div>
-                      <h4 className="font-medium mb-2">Instructor</h4>
-                      <p className="text-gray-700">{workshop.instructor}</p>
-                    </div>
-                  )}
+              {workshop.locationDescription && (
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <h4 className="font-medium mb-2">Location Details</h4>
+                  <p className="text-gray-700">{workshop.locationDescription}</p>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

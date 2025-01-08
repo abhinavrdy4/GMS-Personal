@@ -27,6 +27,14 @@ export const TicketCategories: React.FC<TicketCategoriesProps> = ({
     );
   }
 
+  const handleTicketSelect = (category: TicketCategory) => {
+    if (category.bookingLink) {
+      window.open(category.bookingLink, '_blank', 'noopener,noreferrer');
+    } else {
+      onSelectTicket(category.id);
+    }
+  };
+
   return (
     <div className="space-y-4">
       {categories.map((category) => {
@@ -69,7 +77,7 @@ export const TicketCategories: React.FC<TicketCategoriesProps> = ({
                   </div>
                 ) : (
                   <button
-                    onClick={() => onSelectTicket(category.id)}
+                    onClick={() => handleTicketSelect(category)}
                     className="w-full btn btn-primary"
                   >
                     Select Tickets

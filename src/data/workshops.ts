@@ -215,7 +215,8 @@ export const workshops: Workshop[] = [
         name: 'Regular',
         price: 600,
         description: 'Standard admission ticket',
-        enabled: true
+        enabled: true,
+        bookingLink: 'https://ticketing.example.com/summer-fest/regular'
       }
     ]
   },

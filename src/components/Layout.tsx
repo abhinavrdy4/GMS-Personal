@@ -17,7 +17,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent
                          hover:opacity-80 transition-opacity"
               >
-                CityVibz
+                LiveVibe
               </button>
             </div>
 

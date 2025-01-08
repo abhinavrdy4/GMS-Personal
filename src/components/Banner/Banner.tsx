@@ -102,6 +102,8 @@ export const Banner = () => {
             title={item.title}
             subtitle={item.subtitle}
             location={item.location}
+            locationUrl={item.locationUrl}
+            instagramStoryUrl={item.instagramStoryUrl}
             categories={item.categories}
             path={item.path}
             type={item.type}

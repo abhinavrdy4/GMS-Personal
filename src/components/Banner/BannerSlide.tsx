@@ -1,12 +1,14 @@
 import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { MapPin, Calendar, Instagram } from 'lucide-react';
 
 interface BannerSlideProps {
   image: string;
   title: string;
   subtitle: string;
   location: string;
+  locationUrl?: string;
+  instagramStoryUrl?: string;
   categories: string[];
   path: string;
   type: 'workshop' | 'class';
@@ -17,6 +19,8 @@ export const BannerSlide = ({
   title, 
   subtitle,
   location,
+  locationUrl,
+  instagramStoryUrl,
   categories,
   path,
   type
@@ -56,10 +60,35 @@ export const BannerSlide = ({
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 {subtitle}
               </div>
-              <div className="flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
-                {location}
-              </div>
+              {locationUrl ? (
+                <a
+                  href={locationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 hover:text-white transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  {location}
+                </a>
+              ) : (
+                <div className="flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                  {location}
+                </div>
+              )}
+              {instagramStoryUrl && (
+                <a
+                  href={instagramStoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 hover:text-white transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="hidden sm:inline">View Story</span>
+                </a>
+              )}
             </div>
             <button
               onClick={() => navigate(path)}

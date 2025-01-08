@@ -189,8 +189,8 @@ export const workshops: Workshop[] = [
     type: 'workshop',
     title: 'Bhangra Dance Workshop',
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 25',
-    time: '6:30 PM',
+    date: 'Jan 12',
+    time: '2:00 PM',
     location: 'Good Move Studio',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor..',
@@ -205,9 +205,14 @@ export const workshops: Workshop[] = [
         answer: 'No prior experience needed.'
       },
       {
-        question: 'Are there any Studio Rules?',
-        answer: 'Yes, bring a clean pair of shoes with you. \n Please arrive 10 minutes early.\n Carry a water bottle with you.'
+        question: 'What should I wear?',
+        answer: 'Wear comfortable clothing.'
       }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
     ],
     ticketCategories: [
       {

@@ -13,7 +13,7 @@ export const workshops: Workshop[] = [
     featured: true,
     attendees: 234,
     description: 'Join us for an unforgettable evening of live music under the stars at Central Park\'s iconic amphitheater.',
-    price: '$49.99',
+    price: '₹499',
     schedule: [
       { time: '4:00 PM', activity: 'Gates Open' },
       { time: '5:00 PM', activity: 'Opening Act: The Melodics' },
@@ -21,14 +21,34 @@ export const workshops: Workshop[] = [
       { time: '8:00 PM', activity: 'Headliner: Electric Pulse' },
       { time: '10:30 PM', activity: 'Closing Ceremony' }
     ],
+    faqs: [
+      {
+        question: 'Do I need prior art experience?',
+        answer: 'No prior experience is needed! This workshop is designed for all skill levels, from complete beginners to experienced artists.'
+      },
+      {
+        question: 'What materials are provided?',
+        answer: 'All art supplies including canvas, paints, brushes, and easels will be provided. You just need to bring your creative spirit!'
+      },
+      {
+        question: 'Is the wine included in the ticket price?',
+        answer: 'Yes, the ticket includes wine tasting with a selection of premium wines. Non-alcoholic beverages are also available.'
+      },
+      {
+        question: 'What is the age requirement?',
+        answer: 'This event is for adults 21 and over due to the wine tasting component.'
+      },
+      {
+        question: 'Can I take my artwork home?',
+        answer: 'Yes! You will take home your completed masterpiece at the end of the evening.'
+      }
+    ],
     ticketCategories: [
       {
         id: 'early-bird',
         name: 'Early Bird',
         price: 39.99,
         description: 'Limited early bird tickets at a special price',
-        available: 0,
-        total: 100,
         enabled: true,
         endDate: '2024-07-15'
       },
@@ -37,8 +57,6 @@ export const workshops: Workshop[] = [
         name: 'Regular',
         price: 49.99,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       },
       {
@@ -46,8 +64,6 @@ export const workshops: Workshop[] = [
         name: 'VIP Access',
         price: 99.99,
         description: 'VIP treatment with exclusive backstage access',
-        available: 25,
-        total: 50,
         enabled: true
       }
     ]
@@ -63,7 +79,7 @@ export const workshops: Workshop[] = [
     categories: ['Kids', 'Art & Craft'],
     attendees: 89,
     description: 'Experience an evening of fine art and wine tasting in our beautiful downtown gallery.',
-    price: '$75',
+    price: '₹499',
     schedule: [
       { time: '7:00 PM', activity: 'Welcome Reception' },
       { time: '7:30 PM', activity: 'Art Tour Begins' },
@@ -81,8 +97,6 @@ export const workshops: Workshop[] = [
         name: 'Early Bird',
         price: 39.99,
         description: 'Limited early bird tickets at a special price',
-        available: 0,
-        total: 100,
         enabled: true,
         endDate: '2024-07-15'
       },
@@ -91,8 +105,6 @@ export const workshops: Workshop[] = [
         name: 'Regular',
         price: 49.99,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       },
       {
@@ -100,8 +112,6 @@ export const workshops: Workshop[] = [
         name: 'VIP Access',
         price: 99.99,
         description: 'VIP treatment with exclusive backstage access',
-        available: 25,
-        total: 50,
         enabled: true
       }
     ]
@@ -118,7 +128,7 @@ export const workshops: Workshop[] = [
     featured: true,
     attendees: 22,
     description: 'Join us for a vibrant dance session inspired by the energetic beats of "Paiya Dei"! Open to all levels, this workshop blends expressive choreography, rhythmic footwork, and cultural insights.',
-    price: '$35',
+    price: '₹499',
     instructor: 'Bharath',
     schedule: [
       { time: '6:30 PM', activity: 'Warm-up' },
@@ -142,8 +152,6 @@ export const workshops: Workshop[] = [
         name: 'Early Bird',
         price: 39.99,
         description: 'Limited early bird tickets at a special price',
-        available: 10,
-        total: 100,
         enabled: true,
         endDate: '2024-07-15'
       },
@@ -152,8 +160,6 @@ export const workshops: Workshop[] = [
         name: 'Regular',
         price: 49.99,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       }
     ]
@@ -169,17 +175,15 @@ export const workshops: Workshop[] = [
     categories: ['Fitness', 'Workshops'],
     attendees: 45,
     description: 'Learn professional photography techniques in this hands-on workshop.',
-    price: '$199',
+    price: '₹499',
     instructor: 'Michael Chen',
-    contact: 'michael@creativestudio.com',
+    // contact: 'michael@creativestudio.com',
     ticketCategories: [
       {
         id: 'regular',
         name: 'Regular',
         price: 49.99,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       }
     ]
@@ -191,47 +195,27 @@ export const workshops: Workshop[] = [
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Aug 25',
     time: '6:30 PM',
-    location: 'Dance Studio',
+    location: '[google link] Good Move Studio',
     categories: ['Kids', 'Workshops'],
     attendees: 123,
     description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
-    price: '$35',
-    instructor: 'Priya Singh',
-    // contact: 'priya@dancestudio.com',
-    schedule: [
-      { time: '6:30 PM', activity: 'Warm-up' },
-      { time: '7:00 PM', activity: 'Basic Steps' },
-      { time: '8:00 PM', activity: 'Choreography' },
-      { time: '8:45 PM', activity: 'Cool-down' }
-    ],
-    // faqs: [
-    //   {
-    //     question: 'Do I need prior dance experience?',
-    //     answer: 'No prior experience needed! This workshop is suitable for all levels.'
-    //   },
-    //   {
-    //     question: 'What should I wear?',
-    //     answer: 'Comfortable workout clothes and athletic shoes.'
-    //   }
-    // ],
-    ticketCategories: [
+    price: '₹499',
+    faqs: [
       {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 39.99,
-        description: 'Limited early bird tickets at a special price',
-        available: 10,
-        total: 100,
-        enabled: true,
-        endDate: '2024-07-15'
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
       },
+      {
+        question: 'Are there any Studio Rules?',
+        answer: 'Yes, bring a clean pair of shoes with you. \n Please arrive 10 minutes early.\n Carry a water bottle with you.'
+      }
+    ],
+    ticketCategories: [
       {
         id: 'regular',
         name: 'Regular',
-        price: 49.99,
+        price: 600,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       }
     ]
@@ -247,7 +231,7 @@ export const workshops: Workshop[] = [
     categories: ['Kids', 'Workshops'],
     attendees: 20,
     description: 'Explore urban photography techniques while walking through the city.',
-    price: '$45',
+    price: '₹499',
     instructor: 'Sarah Williams',
     contact: 'sarah@photowalks.com',
     ticketCategories: [
@@ -256,8 +240,6 @@ export const workshops: Workshop[] = [
         name: 'Early Bird',
         price: 39.99,
         description: 'Limited early bird tickets at a special price',
-        available: 0,
-        total: 100,
         enabled: true,
         endDate: '2024-07-15'
       },
@@ -266,8 +248,6 @@ export const workshops: Workshop[] = [
         name: 'Regular',
         price: 49.99,
         description: 'Standard admission ticket',
-        available: 150,
-        total: 400,
         enabled: true
       }
     ]

@@ -1,13 +1,34 @@
-// Update the BaseEvent interface to include the featured flag
-export interface BaseEvent {
+export interface TicketCategory {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  enabled: boolean;
+  endDate?: string;
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface Workshop {
   id: number;
+  type: 'workshop';
   title: string;
   image: string;
+  date: string;
+  time: string;
   location: string;
-  attendees: number;
   categories: string[];
-  description: string;
   featured?: boolean;
+  attendees: number;
+  description: string;
+  price: string;
+  instructor?: string;
+  schedule?: Array<{ time: string; activity: string }>;
+  faqs?: FAQ[];
+  ticketCategories: TicketCategory[];
 }
 
 // Rest of the file remains the same...

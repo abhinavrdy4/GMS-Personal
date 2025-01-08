@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
-  MapPin, Calendar, Clock, Users, Share2, Heart,
+  MapPin, Calendar, Clock, Share2, Heart,
   Facebook, Twitter, Linkedin, Mail,
   ChevronDown, ChevronUp
 } from 'lucide-react';
@@ -79,10 +79,6 @@ export const WorkshopDetails = () => {
                 <MapPin className="w-5 h-5" />
                 {workshop.location}
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                {workshop.attendees} attending
-              </div>
             </div>
           </div>
         </div>
@@ -134,7 +130,7 @@ export const WorkshopDetails = () => {
 
             {/* Schedule */}
             {workshop.schedule && (
-              <div className="glass-card rounded-xl p-6">
+              <div className="glass-card rounded-xl p-6 mb-8">
                 <h2 className="text-2xl font-bold mb-4">Workshop Schedule</h2>
                 <div className="space-y-4">
                   {workshop.schedule.map(({ time, activity }, index) => (
@@ -144,6 +140,36 @@ export const WorkshopDetails = () => {
                     >
                       <div className="w-24 font-medium text-purple-600">{time}</div>
                       <div className="flex-1">{activity}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* FAQs */}
+            {workshop.faqs && workshop.faqs.length > 0 && (
+              <div className="glass-card rounded-xl p-6">
+                <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                <div className="space-y-2">
+                  {workshop.faqs.map(({ question, answer }, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden">
+                      <button
+                        className="w-full flex items-center justify-between p-4 text-left font-medium
+                                hover:bg-white/40 transition-colors"
+                        onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                      >
+                        {question}
+                        {expandedFaq === index ? (
+                          <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                        )}
+                      </button>
+                      {expandedFaq === index && (
+                        <div className="p-4 pt-0 text-gray-700">
+                          {answer}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

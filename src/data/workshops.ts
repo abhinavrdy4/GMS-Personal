@@ -142,131 +142,84 @@ export const workshops: Workshop[] = [
       }
     ]
   },
-  {
-    id: 4,
-    type: 'workshop',
-    title: 'Art & Wine Evening',
-    image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 18',
-    time: '7:00 PM',
-    location: 'Downtown Gallery',
-    categories: ['Kids', 'Art & Craft'],
-    description: 'Experience an evening of fine art and wine tasting in our beautiful downtown gallery.',
-    price: '₹499',
-    schedule: [
-      { time: '7:00 PM', activity: 'Welcome Reception' },
-      { time: '7:30 PM', activity: 'Art Tour Begins' },
-      { time: '8:30 PM', activity: 'Wine Tasting' },
-      { time: '9:30 PM', activity: 'Artist Meet & Greet' }
-    ],
-    // organizer: {
-    //   name: 'Downtown Gallery',
-    //   email: 'events@downtowngallery.com',
-    //   phone: '(555) 234-5678'
-    // },
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 39.99,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        endDate: '2024-07-15'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 49.99,
-        description: 'Standard admission ticket',
-        enabled: true
-      },
-      {
-        id: 'vip',
-        name: 'VIP Access',
-        price: 99.99,
-        description: 'VIP treatment with exclusive backstage access',
-        enabled: true
-      }
-    ]
-  },
-  {
-    id: 4,
-    type: 'workshop',
-    title: 'Paiya Dei by Bharath',
-    image: 'https://storage.googleapis.com/cityvibe/IMG_8640.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 25',
-    time: '6:30 PM',
-    location: 'Good Move Studio',
-    categories: ['Kids', 'Workshops'],
-    // featured: true,
-    description: 'Join us for a vibrant dance session inspired by the energetic beats of "Paiya Dei"! Open to all levels, this workshop blends expressive choreography, rhythmic footwork, and cultural insights.',
-    price: '₹499',
-    instructor: 'Bharath',
-    schedule: [
-      { time: '6:30 PM', activity: 'Warm-up' },
-      { time: '7:00 PM', activity: 'Basic Steps' },
-      { time: '8:00 PM', activity: 'Choreography' },
-      { time: '8:45 PM', activity: 'Cool-down' }
-    ],
-    // faqs: [
-    //   {
-    //     question: 'Do I need prior dance experience?',
-    //     answer: 'No prior experience needed! This workshop is suitable for all levels.'
-    //   },
-    //   {
-    //     question: 'What should I wear?',
-    //     answer: 'Comfortable workout clothes and athletic shoes.'
-    //   }
-    // ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 39.99,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        endDate: '2024-07-15'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 49.99,
-        description: 'Standard admission ticket',
-        enabled: true
-      }
-    ]
-  },
-  {
-    id: 6,
-    type: 'workshop',
-    title: 'Semiclassical',
-    image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Aug 27',
-    time: '9:00 AM',
-    location: 'Good Move Studios',
-    categories: ['Kids', 'Workshops'],
-    description: 'Explore urban photography techniques while walking through the city.',
-    price: '₹499',
-    instructor: 'Sarah Williams',
-    // contact: 'sarah@photowalks.com',
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 39.99,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        endDate: '2024-07-15'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 49.99,
-        description: 'Standard admission ticket',
-        enabled: true
-      }
-    ]
-  },
+  // {
+  //   id: 4,
+  //   type: 'workshop',
+  //   title: 'Art & Wine Evening',
+  //   image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Aug 18',
+  //   time: '7:00 PM',
+  //   location: 'Downtown Gallery',
+  //   categories: ['Kids', 'Art & Craft'],
+  //   description: 'Experience an evening of fine art and wine tasting in our beautiful downtown gallery.',
+  //   price: '₹499',
+  //   schedule: [
+  //     { time: '7:00 PM', activity: 'Welcome Reception' },
+  //     { time: '7:30 PM', activity: 'Art Tour Begins' },
+  //     { time: '8:30 PM', activity: 'Wine Tasting' },
+  //     { time: '9:30 PM', activity: 'Artist Meet & Greet' }
+  //   ],
+  //   // organizer: {
+  //   //   name: 'Downtown Gallery',
+  //   //   email: 'events@downtowngallery.com',
+  //   //   phone: '(555) 234-5678'
+  //   // },
+  //   ticketCategories: [
+  //     {
+  //       id: 'early-bird',
+  //       name: 'Early Bird',
+  //       price: 39.99,
+  //       description: 'Limited early bird tickets at a special price',
+  //       enabled: true,
+  //       endDate: '2024-07-15'
+  //     },
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 49.99,
+  //       description: 'Standard admission ticket',
+  //       enabled: true
+  //     },
+  //     {
+  //       id: 'vip',
+  //       name: 'VIP Access',
+  //       price: 99.99,
+  //       description: 'VIP treatment with exclusive backstage access',
+  //       enabled: true
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 6,
+  //   type: 'workshop',
+  //   title: 'Semiclassical',
+  //   image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Aug 27',
+  //   time: '9:00 AM',
+  //   location: 'Good Move Studios',
+  //   categories: ['Kids', 'Workshops'],
+  //   description: 'Explore urban photography techniques while walking through the city.',
+  //   price: '₹499',
+  //   instructor: 'Sarah Williams',
+  //   // contact: 'sarah@photowalks.com',
+  //   ticketCategories: [
+  //     {
+  //       id: 'early-bird',
+  //       name: 'Early Bird',
+  //       price: 39.99,
+  //       description: 'Limited early bird tickets at a special price',
+  //       enabled: true,
+  //       endDate: '2024-07-15'
+  //     },
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 49.99,
+  //       description: 'Standard admission ticket',
+  //       enabled: true
+  //     }
+  //   ]
+  // },
     // ... rest of the events remain the same
 ];
 

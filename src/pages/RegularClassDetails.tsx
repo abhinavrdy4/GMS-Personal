@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import {
-  MapPin, Users, Share2, Heart, ChevronDown,
-  GraduationCap, Sparkles, ShieldCheck
-} from 'lucide-react';
+import { MapPin, Share2, Heart, ChevronDown, ChevronUp } from 'lucide-react';
 import { eventService } from '../services/eventService';
 import { ScheduleDisplay } from '../components/RegularClass/ScheduleDisplay';
 import { SubscriptionPlans } from '../components/RegularClass/SubscriptionPlans';
-import { Reviews } from '../components/RegularClass/Reviews';
 
 export const RegularClassDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isLiked, setIsLiked] = useState(false);
-  const [showMore, setShowMore] = useState(false);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const classDetails = id ? eventService.getRegularClassById(Number(id)) : undefined;
 
@@ -63,14 +59,22 @@ export const RegularClassDetails = () => {
               {classDetails.title}
             </h1>
             <div className="flex flex-wrap gap-6 text-white/90">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
-                {classDetails.location}
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                {classDetails.attendees}/{classDetails.maxCapacity} enrolled
-              </div>
+              {classDetails.locationUrl ? (
+                <a
+                  href={classDetails.locationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <MapPin className="w-5 h-5" />
+                  {classDetails.location}
+                </a>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5" />
+                  {classDetails.location}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -95,68 +99,12 @@ export const RegularClassDetails = () => {
               </button>
             </div>
 
-            {/* Instructor */}
-            <div className="glass-card rounded-xl p-6 mb-8">
-              <div className="flex items-start gap-6">
-                <img
-                  src={classDetails.instructor.image}
-                  alt={classDetails.instructor.name}
-                  className="w-24 h-24 rounded-full object-cover"
-                />
-                <div>
-                  <h2 className="text-2xl font-bold mb-2">
-                    Meet Your Instructor
-                  </h2>
-                  <h3 className="text-lg font-medium text-purple-600 mb-2">
-                    {classDetails.instructor.name}
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    {classDetails.instructor.bio}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {classDetails.instructor.expertise.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Description */}
             <div className="glass-card rounded-xl p-6 mb-8">
               <h2 className="text-2xl font-bold mb-4">About This Class</h2>
               <p className="text-gray-700 whitespace-pre-line">
                 {classDetails.description}
               </p>
-
-              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="flex items-center gap-3 p-4 rounded-lg bg-purple-50">
-                  <GraduationCap className="w-6 h-6 text-purple-600" />
-                  <div>
-                    <h4 className="font-medium">Experience Level</h4>
-                    <p className="text-sm text-gray-600">{classDetails.level}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-4 rounded-lg bg-purple-50">
-                  <Sparkles className="w-6 h-6 text-purple-600" />
-                  <div>
-                    <h4 className="font-medium">Class Size</h4>
-                    <p className="text-sm text-gray-600">Max {classDetails.maxCapacity} students</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-4 rounded-lg bg-purple-50">
-                  <ShieldCheck className="w-6 h-6 text-purple-600" />
-                  <div>
-                    <h4 className="font-medium">Certification</h4>
-                    <p className="text-sm text-gray-600">Available upon completion</p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Schedule */}
@@ -199,11 +147,35 @@ export const RegularClassDetails = () => {
               </div>
             )}
 
-            {/* Reviews */}
-            <div className="glass-card rounded-xl p-6">
-              <h2 className="text-2xl font-bold mb-6">Student Reviews</h2>
-              <Reviews reviews={classDetails.reviews} />
-            </div>
+            {/* FAQs */}
+            {classDetails.faqs && (
+              <div className="glass-card rounded-xl p-6">
+                <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                <div className="space-y-2">
+                  {classDetails.faqs.map(({ question, answer }, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden">
+                      <button
+                        className="w-full flex items-center justify-between p-4 text-left font-medium
+                                hover:bg-white/40 transition-colors"
+                        onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                      >
+                        {question}
+                        {expandedFaq === index ? (
+                          <ChevronUp className="w-5 h-5 flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 flex-shrink-0" />
+                        )}
+                      </button>
+                      {expandedFaq === index && (
+                        <div className="p-4 pt-0 text-gray-700">
+                          {answer}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Column - Subscription Plans */}

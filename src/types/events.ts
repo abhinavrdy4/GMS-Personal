@@ -5,14 +5,13 @@ export interface BatchSchedule {
 }
 
 export interface ClassSchedule {
-  weekday: BatchSchedule;
-  weekend: BatchSchedule;
+  weekday?: BatchSchedule;
+  weekend?: BatchSchedule;
   frequency: string;
 }
 
-// Update the RegularClass interface (only showing relevant parts)
 export interface RegularClass {
-  // ... other fields
+  // ... other fields remain the same
   schedule: ClassSchedule;
-  // ... other fields
+  // ... other fields remain the same
 }

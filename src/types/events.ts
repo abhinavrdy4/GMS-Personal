@@ -1,32 +1,18 @@
-export interface TicketCategory {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  enabled: boolean;
-  endDate?: string;
-  bookingLink?: string;
+// Add this interface for the new schedule structure
+export interface BatchSchedule {
+  days: string[];
+  timeSlots: Array<{ start: string; end: string }>;
 }
 
-export interface Workshop {
-  id: number;
-  type: 'workshop';
-  title: string;
-  image: string;
-  date: string;
-  time: string;
-  location: string;
-  locationUrl?: string;
-  locationDescription?: string;
-  instagramStoryUrl?: string;
-  categories: string[];
-  featured?: boolean;
-  description: string;
-  price: string;
-  schedule?: Array<{ time: string; activity: string }>;
-  faqs?: Array<{ question: string; answer: string }>;
-  ticketCategories: TicketCategory[];
-  studioGuidelines?: string[]; // Add this field
+export interface ClassSchedule {
+  weekday: BatchSchedule;
+  weekend: BatchSchedule;
+  frequency: string;
 }
 
-// ... rest of the types remain the same
+// Update the RegularClass interface (only showing relevant parts)
+export interface RegularClass {
+  // ... other fields
+  schedule: ClassSchedule;
+  // ... other fields
+}

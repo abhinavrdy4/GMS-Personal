@@ -19,10 +19,19 @@ export const regularClasses: RegularClass[] = [
     //   expertise: ['Hatha Yoga', 'Vinyasa Flow', 'Meditation', 'Breathwork']
     // },
     schedule: {
-      days: ['Saturday', 'Saturday'],
+      weekday: {
+        days: ['Monday', 'Wednesday', 'Friday'],
+        timeSlots: [
+          { start: '07:00', end: '08:15' },
+          { start: '18:30', end: '19:45' }
+        ]
+      },
+      weekend: {
+        days: ['Saturday', 'Saturday'],
       timeSlots: [
         { start: '11:00', end: '12:00' }
-      ],
+      ]
+      },
       frequency: 'Weekly'
     },
     requirements: [

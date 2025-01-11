@@ -4,81 +4,65 @@ export const regularClasses: RegularClass[] = [
   {
     id: 101,
     type: 'regular',
-    title: 'Yoga Flow & Meditation',
-    image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=1500&q=80',
-    categories: ['Wellness', 'Yoga'],
-    location: 'Mindful Living Studio, 123 Serenity Lane',
-    locationUrl: 'https://maps.google.com/?q=Mindful+Living+Studio',
+    title: 'Semi-classical',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=1500&q=80',
+    categories: ['Dance'],
+    location: 'Good Move Studios',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
     featured: true,
-    attendees: 45,
-    maxCapacity: 60,
-    description: 'Join our transformative Yoga Flow & Meditation classes designed to enhance your physical strength, flexibility, and mental clarity.',
+    description: 'Discover the beauty of Semi-Classical dance, a captivating fusion of traditional Indian classical styles and contemporary movements. This class offers a perfect balance of grace, expression, and rhythm, making it accessible to dancers of all levels. Learn intricate footwork, fluid hand gestures, and storytelling techniques while exploring a variety of music, from classical melodies to modern tunes. Ideal for those looking to blend tradition with creativity, this class nurtures artistic expression and celebrates the rich cultural heritage of dance. Join us to move, connect, and express yourself in a dynamic and supportive environment!',
     level: 'All Levels',
-    instructor: {
-      name: 'Sarah Mitchell',
-      image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=300&q=80',
-      bio: 'Certified yoga instructor with 10+ years of experience in mindfulness and meditation practices.',
-      expertise: ['Hatha Yoga', 'Vinyasa Flow', 'Meditation', 'Breathwork']
-    },
+    // instructor: {
+    //   name: 'Sarah Mitchell',
+    //   image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=300&q=80',
+    //   bio: 'Certified yoga instructor with 10+ years of experience in mindfulness and meditation practices.',
+    //   expertise: ['Hatha Yoga', 'Vinyasa Flow', 'Meditation', 'Breathwork']
+    // },
     schedule: {
-      days: ['Tuesday', 'Thursday', 'Saturday'],
+      days: ['Saturday', 'Saturday'],
       timeSlots: [
-        { start: '07:00', end: '08:15' },
-        { start: '18:30', end: '19:45' }
+        { start: '11:00', end: '12:00' }
       ],
       frequency: 'Weekly'
     },
     requirements: [
-      'Comfortable workout clothes',
-      'Yoga mat (rentals available)',
+      'Comfortable ethnic clothes',
       'Water bottle'
     ],
     amenities: [
       'Changing rooms',
-      'Shower facilities',
-      'Mat storage',
-      'Filtered water station'
+      'Filtered water.'
     ],
     faqs: [
       {
         question: 'What if I\'m a complete beginner?',
-        answer: 'Our classes are designed for all levels. The instructor will provide modifications for beginners.'
-      },
-      {
-        question: 'Do I need to bring my own mat?',
-        answer: 'While we recommend bringing your own mat, we do offer mat rentals for a small fee.'
-      },
-      {
-        question: 'What\'s the cancellation policy?',
-        answer: 'Classes can be cancelled up to 12 hours before the scheduled time for a full refund.'
+        answer: 'Our classes are designed for all levels.'
       }
     ],
     subscriptionPlans: [
       {
         id: 'monthly-basic',
         name: 'Monthly Basic',
-        price: 89,
+        price: 3400,
         interval: 'monthly',
-        description: 'Perfect for regular practitioners',
+        description: 'Perfect for exploring interest',
         features: [
-          'Unlimited access to scheduled classes',
-          'Basic amenities access',
-          'Online community access',
-          'Class recordings for 24 hours'
+          'All Basic features',
+          // 'Basic amenities access',
+          // 'Online community access',
+          // 'Class recordings for 24 hours'
         ]
       },
       {
         id: 'quarterly-premium',
         name: 'Quarterly Premium',
-        price: 239,
+        price: 8500,
         interval: 'quarterly',
-        description: 'Best value for dedicated yogis',
+        description: 'Best value for dedicated dancers',
         features: [
           'All Basic features',
-          'Two guest passes per month',
-          'Priority booking',
-          'Extended recordings access (7 days)',
-          '10% off workshops'
+          'Mark holidays',
+          '17% off workshops'
         ],
         popular: true
       }
@@ -90,19 +74,11 @@ export const regularClasses: RegularClass[] = [
     title: 'Dance Fusion',
     image: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=1500&q=80',
     categories: ['Dance', 'Fitness'],
-    location: 'Rhythm Studio, 456 Beat Street',
-    locationUrl: 'https://maps.google.com/?q=Rhythm+Studio',
-    featured: true,
-    attendees: 28,
-    maxCapacity: 40,
-    description: 'Experience the joy of dance with our high-energy fusion classes combining multiple dance styles.',
+    location: 'Good Move Studios',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    featured: false,
+    description: 'Discover the beauty of Semi-Classical dance, a captivating fusion of traditional Indian classical styles and contemporary movements. This class offers a perfect balance of grace, expression, and rhythm, making it accessible to dancers of all levels. Learn intricate footwork, fluid hand gestures, and storytelling techniques while exploring a variety of music, from classical melodies to modern tunes. Ideal for those looking to blend tradition with creativity, this class nurtures artistic expression and celebrates the rich cultural heritage of dance. Join us to move, connect, and express yourself in a dynamic and supportive environment!',
     level: 'Beginner',
-    instructor: {
-      name: 'Michael Rodriguez',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
-      bio: 'Professional dancer with expertise in multiple dance styles.',
-      expertise: ['Hip Hop', 'Latin Dance', 'Contemporary', 'Jazz']
-    },
     schedule: {
       days: ['Monday', 'Wednesday', 'Friday'],
       timeSlots: [

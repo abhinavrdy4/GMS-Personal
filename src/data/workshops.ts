@@ -8,7 +8,7 @@ export const workshops: Workshop[] = [
     image: 'https://storage.googleapis.com/cityvibe/SohamDeb.jpeg?auto=format&fit=crop&w=600&q=80',
     date: 'Jan 19',
     time: '12:00PM - 2:00PM',
-    location: 'Good Move Studio',
+    location: 'Good Move Studios',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEhVZ3WyiMX',

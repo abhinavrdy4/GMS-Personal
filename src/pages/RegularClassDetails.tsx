@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { MapPin, Share2, Heart, ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  MapPin, Users, Share2, Heart,
+  GraduationCap, Sparkles, ChevronDown, ChevronUp
+} from 'lucide-react';
 import { eventService } from '../services/eventService';
 import { ScheduleDisplay } from '../components/RegularClass/ScheduleDisplay';
 import { SubscriptionPlans } from '../components/RegularClass/SubscriptionPlans';
@@ -75,6 +78,10 @@ export const RegularClassDetails = () => {
                   {classDetails.location}
                 </div>
               )}
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                {classDetails.attendees}/{classDetails.maxCapacity} enrolled
+              </div>
             </div>
           </div>
         </div>
@@ -105,6 +112,23 @@ export const RegularClassDetails = () => {
               <p className="text-gray-700 whitespace-pre-line">
                 {classDetails.description}
               </p>
+
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-purple-50">
+                  <GraduationCap className="w-6 h-6 text-purple-600" />
+                  <div>
+                    <h4 className="font-medium">Experience Level</h4>
+                    <p className="text-sm text-gray-600">{classDetails.level}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-purple-50">
+                  <Sparkles className="w-6 h-6 text-purple-600" />
+                  <div>
+                    <h4 className="font-medium">Class Size</h4>
+                    <p className="text-sm text-gray-600">Max {classDetails.maxCapacity} students</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Schedule */}

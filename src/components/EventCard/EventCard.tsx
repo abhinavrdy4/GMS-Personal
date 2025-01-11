@@ -17,6 +17,13 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
     navigate(path);
   };
 
+  // Get categories safely, ensuring we always have an array
+  const categories = Array.isArray(event.categories) 
+    ? event.categories 
+    : event.category 
+      ? [event.category] 
+      : [];
+
   return (
     <div
       onClick={handleClick}
@@ -31,7 +38,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
           <div className="flex flex-wrap gap-2">
-            {event.categories.map(category => (
+            {categories.map(category => (
               <span key={category} className="inline-block px-3 py-1 rounded-full glass-card text-sm 
                                            font-medium text-gray-800 shadow-md backdrop-blur-sm">
                 {category}
@@ -61,7 +68,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
             <div className="flex items-center gap-4 text-sm text-gray-700">
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />
-                {event.schedule.frequency}
+                {event.schedule?.frequency}
               </div>
             </div>
           )}

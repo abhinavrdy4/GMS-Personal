@@ -7,6 +7,8 @@ interface ScheduleDisplayProps {
 }
 
 export const ScheduleDisplay: React.FC<ScheduleDisplayProps> = ({ schedule }) => {
+  if (!schedule?.batches) return null;
+
   return (
     <div className="space-y-8">
       {schedule.batches.map((batch, index) => (

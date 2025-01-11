@@ -11,6 +11,14 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
   plans,
   onSelectPlan,
 }) => {
+  const handlePlanSelect = (plan: SubscriptionPlan) => {
+    if (plan.bookingLink) {
+      window.open(plan.bookingLink, '_blank', 'noopener,noreferrer');
+    } else {
+      onSelectPlan(plan.id);
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 gap-6">
       {plans.map((plan) => (
@@ -48,7 +56,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
             </ul>
 
             <button
-              onClick={() => onSelectPlan(plan.id)}
+              onClick={() => handlePlanSelect(plan)}
               className={`w-full mt-8 py-3 px-6 rounded-lg transition-all duration-300
                         font-medium text-center ${
                           plan.popular 

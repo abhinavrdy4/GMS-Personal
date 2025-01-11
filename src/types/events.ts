@@ -1,18 +1,17 @@
-export interface BatchSchedule {
+export interface TimeSlot {
+  start: string;
+  end: string;
+}
+
+export interface Batch {
   name: string;
   days: string[];
-  timeSlots: Array<{ start: string; end: string }>;
+  timeSlots: TimeSlot[];
 }
 
 export interface ClassSchedule {
-  batches: BatchSchedule[];
   frequency: string;
+  batches: Batch[];
 }
 
-export interface RegularClass {
-  id: number;
-  type: 'regular';
-  // ... other fields
-  schedule: ClassSchedule;
-  // ... other fields
-}
+// ... rest of the types remain the same

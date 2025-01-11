@@ -64,7 +64,8 @@ export const regularClasses: RegularClass[] = [
           // 'Basic amenities access',
           // 'Online community access',
           // 'Class recordings for 24 hours'
-        ]
+        ],
+        bookingLink: 'https://example.com/yoga/quarterly-premium'
       },
       {
         id: 'quarterly-premium',
@@ -77,7 +78,8 @@ export const regularClasses: RegularClass[] = [
           'Mark holidays',
           '17% off workshops'
         ],
-        popular: true
+        popular: true,
+        bookingLink: 'https://example.com/yoga/quarterly-premium'
       }
     ]
   },

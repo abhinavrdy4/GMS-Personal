@@ -34,7 +34,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
             <p className="text-gray-600 mt-2 min-h-[40px]">{plan.description}</p>
 
             <div className="mt-4">
-              <span className="text-4xl font-bold text-purple-600">${plan.price}</span>
+              <span className="text-4xl font-bold text-purple-600">₹{plan.price}</span>
               <span className="text-gray-600">/{plan.interval}</span>
             </div>
 

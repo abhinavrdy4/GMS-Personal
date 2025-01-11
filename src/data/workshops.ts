@@ -12,7 +12,7 @@ export const workshops: Workshop[] = [
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEhVZ3WyiMX',
-    categories: ['Workshops'],
+    categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Such beautiful expressions such Bhav !! Master the art of expressions/bhav rasa and a beautiful kathak based choreo. If I were you I’d jump on to join this workshop in a blink .So what are you waiting for? Register Now‼️',
     price: '₹850',
@@ -35,6 +35,14 @@ export const workshops: Workshop[] = [
     // contact: 'michael@creativestudio.com',
     ticketCategories: [
       {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 700,
+        description: 'Limited early bird tickets at a special price',
+        enabled: false,
+        bookingLink: 'https://rzp.io/rzp/ZH2l1El'
+      },
+      {
         id: 'regular',
         name: 'Regular',
         price: 850,
@@ -55,7 +63,7 @@ export const workshops: Workshop[] = [
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
-    categories: ['Workshops'],
+    categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
     price: '₹499',
@@ -96,7 +104,7 @@ export const workshops: Workshop[] = [
     locationUrl: 'https://g.co/kgs/6gMdR3t',
     locationDescription: '7, 2nd Floor, Kothnur Main Rd, RBI Layout, JP Nagar 7th Phase',
     instagramStoryUrl: 'https://www.instagram.com/p/DEJkxCtSt87/',
-    categories: ['Workshops'],
+    categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Silhouette program\nThis is actually a 4 session program (last session will be of 2 hours for individual shoot)\nWhat to expect:-\n1)Basics of classical dance. Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot',
     price: '₹2600',

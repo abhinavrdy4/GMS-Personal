@@ -31,5 +31,24 @@ export const eventService = {
 
   getRegularClassById(id: number): RegularClass | undefined {
     return regularClasses.find(class_ => class_.id === id);
+  },
+
+  searchEvents(query: string): Event[] {
+    if (!query.trim()) return this.getAllEvents();
+    
+    const searchTerm = query.toLowerCase().trim();
+    return this.getAllEvents().filter(event => {
+      const searchableFields = [
+        event.title,
+        event.description,
+        event.location,
+        ...(event.categories || []),
+        event.type
+      ];
+      
+      return searchableFields.some(field => 
+        field?.toLowerCase().includes(searchTerm)
+      );
+    });
   }
 };

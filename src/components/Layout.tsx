@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Bell, Menu, X } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
+import { useSearch } from '../contexts/SearchContext';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { searchQuery, setSearchQuery } = useSearch();
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    navigate(`/search?q=${encodeURIComponent(e.target.value)}`);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100">
+    <div className="min-h-screen bg-gradient-to-br from-[#f5f5f5] via-[#f0f2f0] to-[#eaeaea]">
       <nav className="fixed top-0 w-full glass-card shadow-lg z-50 h-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
@@ -25,21 +32,19 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               </button>
             </div>
 
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
                 <input
                   type="text"
+                  value={searchQuery}
+                  onChange={handleSearch}
                   placeholder="Search events..."
                   className="w-64 pl-10 pr-4 py-2 rounded-full bg-white/30 border border-white/40 focus:outline-none 
                            focus:ring-2 focus:ring-[#927b45] focus:border-transparent transition-all duration-200
                            placeholder-gray-500 hover:bg-white/40"
                 />
               </div>
-              <button className="p-2 rounded-full hover:bg-white/30 relative transition-colors">
-                <Bell className="h-6 w-6 text-[#1a2f1c]" />
-                <span className="absolute top-0 right-0 h-2 w-2 bg-[#927b45] rounded-full"></span>
-              </button>
             </div>
 
             <button 
@@ -57,15 +62,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
               <input
                 type="text"
+                value={searchQuery}
+                onChange={handleSearch}
                 placeholder="Search events..."
                 className="w-full pl-10 pr-4 py-2 rounded-full bg-white/30 border border-white/40 focus:outline-none 
                          focus:ring-2 focus:ring-[#927b45] focus:border-transparent hover:bg-white/40"
               />
             </div>
-            <button className="w-full flex items-center gap-2 px-4 py-2 text-[#1a2f1c] hover:bg-white/30 rounded-lg">
-              <Bell className="h-5 w-5" />
-              <span>Notifications</span>
-            </button>
           </div>
         )}
       </nav>

@@ -14,8 +14,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex items-center">
               <button 
                 onClick={() => navigate('/')}
-                className="text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent
-                         hover:opacity-80 transition-opacity"
+                className="text-2xl font-bold bg-gradient-to-r from-[#1a2f1c] via-[#927b45] to-black bg-clip-text text-transparent
+                         hover:opacity-80 transition-opacity tracking-tight"
+                style={{ 
+                  textShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  fontFamily: 'system-ui'
+                }}
               >
                 GoodMoveStudios
               </button>
@@ -28,13 +32,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                   type="text"
                   placeholder="Search events..."
                   className="w-64 pl-10 pr-4 py-2 rounded-full bg-white/30 border border-white/40 focus:outline-none 
-                           focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200
+                           focus:ring-2 focus:ring-[#927b45] focus:border-transparent transition-all duration-200
                            placeholder-gray-500 hover:bg-white/40"
                 />
               </div>
               <button className="p-2 rounded-full hover:bg-white/30 relative transition-colors">
-                <Bell className="h-6 w-6 text-gray-700" />
-                <span className="absolute top-0 right-0 h-2 w-2 bg-pink-500 rounded-full"></span>
+                <Bell className="h-6 w-6 text-[#1a2f1c]" />
+                <span className="absolute top-0 right-0 h-2 w-2 bg-[#927b45] rounded-full"></span>
               </button>
             </div>
 
@@ -55,10 +59,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 type="text"
                 placeholder="Search events..."
                 className="w-full pl-10 pr-4 py-2 rounded-full bg-white/30 border border-white/40 focus:outline-none 
-                         focus:ring-2 focus:ring-purple-500 focus:border-transparent hover:bg-white/40"
+                         focus:ring-2 focus:ring-[#927b45] focus:border-transparent hover:bg-white/40"
               />
             </div>
-            <button className="w-full flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-white/30 rounded-lg">
+            <button className="w-full flex items-center gap-2 px-4 py-2 text-[#1a2f1c] hover:bg-white/30 rounded-lg">
               <Bell className="h-5 w-5" />
               <span>Notifications</span>
             </button>

@@ -59,7 +59,7 @@ export const workshops: Workshop[] = [
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Jan 12',
     time: '2:00PM - 4:00PM',
-    location: 'Good Move Studio',
+    location: 'Good Move Studios',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
@@ -100,9 +100,9 @@ export const workshops: Workshop[] = [
     image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Starts Jan 18',
     time: '7:30PM - 9:00PM',
-    location: 'Danzelle Dance Studio',
-    locationUrl: 'https://g.co/kgs/6gMdR3t',
-    locationDescription: '7, 2nd Floor, Kothnur Main Rd, RBI Layout, JP Nagar 7th Phase',
+    location: 'Good Move Studios',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEJkxCtSt87/',
     categories: ['Workshops', 'Dance'],
     featured: true,
@@ -147,6 +147,62 @@ export const workshops: Workshop[] = [
         description: 'Standard admission ticket',
         enabled: true,
         bookingLink: 'https://rzp.io/rzp/ZH2l1El'
+      }
+    ]
+  },
+  {
+    id: 4,
+    type: 'workshop',
+    title: 'Saiyaan Silhouette Workshop',
+    image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Starts Jan 18',
+    time: '12:00PM - 1:30PM',
+    location: 'Danzelle Dance Studio',
+    locationUrl: 'https://g.co/kgs/6gMdR3t',
+    locationDescription: '7, 2nd Floor, Kothnur Main Rd, RBI Layout, JP Nagar 7th Phase',
+    instagramStoryUrl: 'https://www.instagram.com/p/DEpIwRYy-5F/',
+    categories: ['Workshops', 'Dance'],
+    description: 'Silhouette program\nThis is actually a 4 session program (last session will be of 2 hours for individual shoot)\nWhat to expect:-\n1)Basics of classical dance. Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot',
+    price: '₹2600',
+    faqs: [
+      {
+        question: 'Is it a multiple day workshop?',
+        answer: 'Yes, it spans across 2 weekends i.e 4 classes.'
+      },
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear ethnic.'
+      },
+      {
+        question: 'Does the program includes private shoot?',
+        answer: 'Yes'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 2200,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/AKQVyuo'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 2600,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/AKQVyuo'
       }
     ]
   },

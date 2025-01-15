@@ -8,7 +8,7 @@ export const workshops: Workshop[] = [
     image: 'https://storage.googleapis.com/cityvibe/SohamDeb.jpeg?auto=format&fit=crop&w=600&q=80',
     date: 'Jan 19',
     time: '12:00PM - 2:00PM',
-    location: 'Good Move Studios',
+    location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEhVZ3WyiMX',
@@ -53,52 +53,11 @@ export const workshops: Workshop[] = [
   {
     id: 2,
     type: 'workshop',
-    title: 'Bhangra Dance Workshop',
-    image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 12',
-    time: '2:00PM - 4:00PM',
-    location: 'Good Move Studios',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
-    categories: ['Workshops', 'Dance'],
-    featured: true,
-    description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
-    price: '₹499',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear comfortable clothing.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 600,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://ticketing.example.com/summer-fest/regular'
-      }
-    ]
-  },
-  {
-    id: 3,
-    type: 'workshop',
     title: 'Sahiba Silhouette Workshop',
     image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Starts Jan 18',
     time: '7:30PM - 9:00PM',
-    location: 'Good Move Studios',
+    location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
     instagramStoryUrl: 'https://www.instagram.com/p/DEJkxCtSt87/',
@@ -149,13 +108,61 @@ export const workshops: Workshop[] = [
     ]
   },
   {
+    id: 3,
+    type: 'workshop',
+    title: 'Thillana 2.0: A Bharatnatyam Workshop',
+    image: 'https://storage.googleapis.com/cityvibe/bharatnatyam.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Jan 18',
+    time: '2:00PM - 4:00PM',
+    location: 'Good Move Studios, Koramangala',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+    instagramStoryUrl: 'https://www.instagram.com/p/DEypBZNyHjm/',
+    categories: ['Workshops', 'Dance'],
+    description: 'Discover the timeless grace of Bharatnatyam with a modern twist! Thillana 2.0 blends intricate footwork, expressive storytelling, and vibrant rhythms in an unforgettable dance experience. Perfect for all levels—join us and let tradition meet creativity!',
+    price: '₹699',
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear ethnic clothes.'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed in the studio. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 599,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/Yl8FNfp'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 699,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/Yl8FNfp'
+      }
+    ]
+  },
+  {
     id: 4,
     type: 'workshop',
     title: 'Saiyaan Silhouette Workshop',
     image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Starts Jan 18',
     time: '12:00PM - 1:30PM',
-    location: 'Danzelle Dance Studio',
+    location: 'Danzelle Dance Studio, JP Nagar',
     locationUrl: 'https://g.co/kgs/6gMdR3t',
     locationDescription: '7, 2nd Floor, Kothnur Main Rd, RBI Layout, JP Nagar 7th Phase',
     instagramStoryUrl: 'https://www.instagram.com/p/DEpIwRYy-5F/',
@@ -207,59 +214,11 @@ export const workshops: Workshop[] = [
   {
     id: 5,
     type: 'workshop',
-    title: 'Thillana 2.0: A Bharatnatyam Workshop',
-    image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 18',
-    time: '2:00PM - 4:00PM',
-    location: 'Good Move Studios',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DEypBZNyHjm/',
-    categories: ['Workshops', 'Dance'],
-    description: 'Discover the timeless grace of Bharatnatyam with a modern twist! Thillana 2.0 blends intricate footwork, expressive storytelling, and vibrant rhythms in an unforgettable dance experience. Perfect for all levels—join us and let tradition meet creativity!',
-    price: '₹699',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear ethnic clothes.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed in the studio. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 599,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/Yl8FNfp'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 699,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/Yl8FNfp'
-      }
-    ]
-  },
-  {
-    id: 6,
-    type: 'workshop',
     title: 'Peelings from Surya: A Tollywood Dance Workshop',
-    image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
+    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Jan 17',
     time: '7:30PM - 9:30PM',
-    location: 'Good Move Studios',
+    location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Back by popular demand! Join the When You’re Cooler Than the Freezer series with Peelings from Surya, a high-energy Tollywood dance workshop. Groove to electrifying beats, master iconic moves, and rock the dance floor like never before. Don’t miss the thrill—let’s set the stage on fire!',
     instagramStoryUrl: 'https://www.instagram.com/p/DEwsMSiy1dn/',
@@ -293,19 +252,20 @@ export const workshops: Workshop[] = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     type: 'workshop',
     title: 'Pottery Workshop',
     image: 'https://storage.googleapis.com/cityvibe/pottery.PNG?auto=format&fit=crop&w=600&q=80',
     date: 'Jan 18',
     time: '11:00AM - 1:00PM',
-    location: 'Roastea - Curated Coffee And Tea Artisans',
+    location: 'Roastea, Koramangala',
     locationUrl: 'https://g.co/kgs/n2NVapk',
     locationDescription: '80 Feet Rd, next to Akshaya Motors Mercedes Benz Showroom, 4th Block, Koramangala',
     instagramStoryUrl: 'https://www.instagram.com/p/DEwPpbwSIRk/',
     categories: ['Workshops', 'Art & Craft'],
     description: 'Unwind and get creative at our cozy café pottery workshop! Enjoy the soothing charm of clay sculpting while sipping on your favorite drinks in a warm, sweet setting. Perfect for beginners and art lovers alike—come mold, shape, and craft your masterpiece!',
     price: '₹1700',
+    featured: true,
     faqs: [
       {
         question: 'Do I need prior experience?',
@@ -323,6 +283,47 @@ export const workshops: Workshop[] = [
         description: 'Limited early bird tickets at a special price',
         enabled: true,
         bookingLink: 'https://rzp.io/rzp/A5J64bix'
+      }
+    ]
+  },
+  {
+    id: 7,
+    type: 'workshop',
+    title: 'Bhangra Dance Workshop',
+    image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Jan 12',
+    time: '2:00PM - 4:00PM',
+    location: 'Good Move Studios, Koramangala',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+    instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
+    categories: ['Workshops', 'Dance'],
+    featured: false,
+    description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
+    price: '₹499',
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear comfortable clothing.'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 600,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://ticketing.example.com/summer-fest/regular'
       }
     ]
   },

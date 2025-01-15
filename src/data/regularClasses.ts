@@ -7,7 +7,7 @@ export const regularClasses: RegularClass[] = [
       title: 'Kathak',
       image: 'https://storage.googleapis.com/cityvibe/kathak.PNG?auto=format&fit=crop&w=1500&q=80',
       categories: ['Dance'],
-      location: 'Good Move Studios',
+      location: 'Good Move Studios, Koramangala',
       locationUrl: 'https://g.co/kgs/BYH4hS8',
       description: 'Step into the enchanting world of Kathak, a classical Indian dance form celebrated for its graceful spins, intricate footwork, and expressive storytelling. In this class, you will learn the fundamentals of rhythm, hand gestures (mudras), and emotive expressions (abhinaya), all set to traditional and modern compositions. Perfect for beginners and those seeking to deepen their cultural connection, this class offers a beautiful journey into the art of Kathak!',
       maxCapacity: 30,
@@ -82,7 +82,7 @@ export const regularClasses: RegularClass[] = [
     title: 'Semi-classical',
     image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=1500&q=80',
     categories: ['Dance'],
-    location: 'Good Move Studios',
+    location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     maxCapacity: 20,
     description: 'Discover the beauty of Semi-Classical dance, a captivating fusion of traditional Indian classical styles and contemporary movements. This class offers a perfect balance of grace, expression, and rhythm, making it accessible to dancers of all levels. Learn intricate footwork, fluid hand gestures, and storytelling techniques while exploring a variety of music, from classical melodies to modern tunes. Ideal for those looking to blend tradition with creativity, this class nurtures artistic expression and celebrates the rich cultural heritage of dance. Join us to move, connect, and express yourself in a dynamic and supportive environment!',
@@ -159,11 +159,86 @@ export const regularClasses: RegularClass[] = [
   },
   {
     id: 103,
+      type: 'regular',
+      title: 'Kids Regular Classes',
+      image: 'https://storage.googleapis.com/cityvibe/kids.PNG?auto=format&fit=crop&w=1500&q=80',
+      categories: ['Dance', 'Kids'],
+      location: 'Good Move Studios',
+      locationUrl: 'https://g.co/kgs/BYH4hS8',
+      description: 'Let your little ones groove and have fun! Our kids dance class combines energy, creativity, and simple choreography to keep them active and smiling. Perfect for all skill levels!',
+      maxCapacity: 10,
+      level: 'Beginner',
+      featured: true,
+      // instructor: {
+      //   name: 'Sarah Mitchell',
+      //   image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=300&q=80',
+      //   bio: 'Certified yoga instructor with 10+ years of experience in mindfulness and meditation practices.',
+      //   expertise: ['Hatha Yoga', 'Vinyasa Flow', 'Meditation', 'Breathwork']
+      // },
+      schedule: {
+        batches: [
+          {
+            name: "Weekend Batch",
+            days: ['Saturday', 'Sunday'],
+            timeSlots: [
+              { start: '12:00 PM', end: '1:00 PM' }
+            ]
+          }
+        ],
+        frequency: 'Weekly'
+      },
+      requirements: [
+        'Comfortable clothes',
+        'Water bottle'
+      ],
+      amenities: [
+        'Changing rooms',
+        'Filtered water.'
+      ],
+      faqs: [
+        {
+          question: 'What if I\'m a complete beginner?',
+          answer: 'Our classes are designed for all levels.'
+        }
+      ],
+      subscriptionPlans: [
+        {
+          id: 'monthly-basic',
+          name: 'Monthly Basic',
+          price: 2400,
+          interval: 'monthly',
+          description: 'Perfect for exploring interest',
+          features: [
+            'All Basic features',
+            // 'Basic amenities access',
+            // 'Online community access',
+            // 'Class recordings for 24 hours'
+          ],
+          bookingLink: 'https://rzp.io/rzp/xJn2d5q'
+        },
+        {
+          id: 'quarterly-premium',
+          name: 'Quarterly Premium',
+          price: 6500,
+          interval: 'quarterly',
+          description: 'Best value for dedicated dancers',
+          features: [
+            'All Basic features',
+            'Mark holidays',
+            '10% off workshops'
+          ],
+          popular: true,
+          bookingLink: 'https://rzp.io/rzp/xJn2d5q'
+        }
+      ]
+    },
+  {
+    id: 104,
     type: 'regular',
     title: 'Bollywood',
-    image: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=1500&q=80',
+    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=1500&q=80',
     categories: ['Dance'],
-    location: 'Good Move Studios',
+    location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     featured: false,
     description: 'Dive into the electrifying world of Modern Bollywood dance! This high-energy class blends the vibrant rhythms of Bollywood with dynamic moves from hip-hop, contemporary, and other global styles. Perfect for beginners and dance enthusiasts alike, you will learn expressive choreography that fuses traditional Indian flair with modern grooves. Whether you are looking to unleash your inner performer or just have fun, this class promises a creative, upbeat, and unforgettable experience!',
@@ -230,85 +305,11 @@ export const regularClasses: RegularClass[] = [
       }
     ]
   },
-  {
-    id: 104,
-      type: 'regular',
-      title: 'Kids Regular Classes',
-      image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=1500&q=80',
-      categories: ['Dance', 'Kids'],
-      location: 'Good Move Studios',
-      locationUrl: 'https://g.co/kgs/BYH4hS8',
-      description: 'Let your little ones groove and have fun! Our kids dance class combines energy, creativity, and simple choreography to keep them active and smiling. Perfect for all skill levels!',
-      maxCapacity: 10,
-      level: 'Beginner',
-      // instructor: {
-      //   name: 'Sarah Mitchell',
-      //   image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=300&q=80',
-      //   bio: 'Certified yoga instructor with 10+ years of experience in mindfulness and meditation practices.',
-      //   expertise: ['Hatha Yoga', 'Vinyasa Flow', 'Meditation', 'Breathwork']
-      // },
-      schedule: {
-        batches: [
-          {
-            name: "Weekend Batch",
-            days: ['Saturday', 'Sunday'],
-            timeSlots: [
-              { start: '12:00 PM', end: '1:00 PM' }
-            ]
-          }
-        ],
-        frequency: 'Weekly'
-      },
-      requirements: [
-        'Comfortable clothes',
-        'Water bottle'
-      ],
-      amenities: [
-        'Changing rooms',
-        'Filtered water.'
-      ],
-      faqs: [
-        {
-          question: 'What if I\'m a complete beginner?',
-          answer: 'Our classes are designed for all levels.'
-        }
-      ],
-      subscriptionPlans: [
-        {
-          id: 'monthly-basic',
-          name: 'Monthly Basic',
-          price: 2400,
-          interval: 'monthly',
-          description: 'Perfect for exploring interest',
-          features: [
-            'All Basic features',
-            // 'Basic amenities access',
-            // 'Online community access',
-            // 'Class recordings for 24 hours'
-          ],
-          bookingLink: 'https://rzp.io/rzp/xJn2d5q'
-        },
-        {
-          id: 'quarterly-premium',
-          name: 'Quarterly Premium',
-          price: 6500,
-          interval: 'quarterly',
-          description: 'Best value for dedicated dancers',
-          features: [
-            'All Basic features',
-            'Mark holidays',
-            '10% off workshops'
-          ],
-          popular: true,
-          bookingLink: 'https://rzp.io/rzp/xJn2d5q'
-        }
-      ]
-    },
     {
       id: 105,
         type: 'regular',
         title: 'Dance Fit',
-        image: 'https://storage.googleapis.com/cityvibe/IMG_9661.PNG?auto=format&fit=crop&w=1500&q=80',
+        image: 'https://storage.googleapis.com/cityvibe/fitness.PNG?auto=format&fit=crop&w=1500&q=80',
         categories: ['Dance', 'Fitness'],
         location: 'Good Move Studios',
         locationUrl: 'https://g.co/kgs/BYH4hS8',

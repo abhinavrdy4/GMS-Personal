@@ -49,7 +49,7 @@ export const regularClasses: RegularClass[] = [
         {
           id: 'monthly-basic',
           name: 'Monthly Basic',
-          price: 3400,
+          price: 2200,
           interval: 'monthly',
           description: 'Perfect for exploring interest',
           features: [
@@ -58,12 +58,12 @@ export const regularClasses: RegularClass[] = [
             // 'Online community access',
             // 'Class recordings for 24 hours'
           ],
-          bookingLink: 'https://example.com/yoga/quarterly-premium'
+          bookingLink: 'https://rzp.io/l/kathakmembership'
         },
         {
           id: 'quarterly-premium',
           name: 'Quarterly Premium',
-          price: 8500,
+          price: 5600,
           interval: 'quarterly',
           description: 'Best value for dedicated dancers',
           features: [
@@ -72,7 +72,7 @@ export const regularClasses: RegularClass[] = [
             '17% off workshops'
           ],
           popular: true,
-          bookingLink: 'https://example.com/yoga/quarterly-premium'
+          bookingLink: 'https://rzp.io/l/kathakmembership'
         }
       ]
     },

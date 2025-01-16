@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
-  MapPin, Users, Share2, Heart,
+  MapPin, Share2, Heart, Instagram,
   GraduationCap, Sparkles, ChevronDown, ChevronUp
 } from 'lucide-react';
 import { eventService } from '../services/eventService';
@@ -78,10 +78,17 @@ export const RegularClassDetails = () => {
                   {classDetails.location}
                 </div>
               )}
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                {classDetails.attendees}/{classDetails.maxCapacity} enrolled
-              </div>
+              {classDetails.instagramStoryUrl && (
+                <a
+                  href={classDetails.instagramStoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Instagram className="w-5 h-5" />
+                  <span>View Story</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

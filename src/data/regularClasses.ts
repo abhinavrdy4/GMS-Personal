@@ -11,6 +11,7 @@ export const regularClasses: RegularClass[] = [
       locationUrl: 'https://g.co/kgs/BYH4hS8',
       description: 'Step into the enchanting world of Kathak, a classical Indian dance form celebrated for its graceful spins, intricate footwork, and expressive storytelling. In this class, you will learn the fundamentals of rhythm, hand gestures (mudras), and emotive expressions (abhinaya), all set to traditional and modern compositions. Perfect for beginners and those seeking to deepen their cultural connection, this class offers a beautiful journey into the art of Kathak!',
       maxCapacity: 30,
+      instagramStoryUrl: 'https://www.instagram.com/p/C_arnDJyexg/',
       level: 'All Levels',
       featured: true,
       // instructor: {
@@ -85,6 +86,7 @@ export const regularClasses: RegularClass[] = [
     location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     maxCapacity: 20,
+    instagramStoryUrl: 'https://www.instagram.com/p/C6YZEZ0soCv/',
     description: 'Discover the beauty of Semi-Classical dance, a captivating fusion of traditional Indian classical styles and contemporary movements. This class offers a perfect balance of grace, expression, and rhythm, making it accessible to dancers of all levels. Learn intricate footwork, fluid hand gestures, and storytelling techniques while exploring a variety of music, from classical melodies to modern tunes. Ideal for those looking to blend tradition with creativity, this class nurtures artistic expression and celebrates the rich cultural heritage of dance. Join us to move, connect, and express yourself in a dynamic and supportive environment!',
     level: 'All Levels',
     // instructor: {
@@ -244,6 +246,7 @@ export const regularClasses: RegularClass[] = [
     description: 'Dive into the electrifying world of Modern Bollywood dance! This high-energy class blends the vibrant rhythms of Bollywood with dynamic moves from hip-hop, contemporary, and other global styles. Perfect for beginners and dance enthusiasts alike, you will learn expressive choreography that fuses traditional Indian flair with modern grooves. Whether you are looking to unleash your inner performer or just have fun, this class promises a creative, upbeat, and unforgettable experience!',
     level: 'Beginner',
     maxCapacity: 20,
+    instagramStoryUrl: 'https://www.instagram.com/p/DB8E2vPSatV/',
     schedule: {
       batches: [
         {

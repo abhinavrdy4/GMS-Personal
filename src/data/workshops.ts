@@ -63,7 +63,7 @@ export const workshops: Workshop[] = [
     instagramStoryUrl: 'https://www.instagram.com/p/DEJkxCtSt87/',
     categories: ['Workshops', 'Dance'],
     featured: true,
-    description: 'Silhouette program\nThis is actually a 4 session program (last session will be of 2 hours for individual shoot)\nWhat to expect:-\n1)Basics of classical dance. Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot',
+    description: 'This is actually a 4 session program (last session will be of 2 hours for individual shoot.\nWhat to expect:-\n1)Basics of classical dance Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot\n\n18,19,January: 7:30-9PM\n25th,January: 2:00-4:00PM\n🌈❤️Last day shoot\n26th January: 2:00-4:00PM',
     price: '₹2600',
     faqs: [
       {
@@ -155,6 +155,47 @@ export const workshops: Workshop[] = [
       }
     ]
   },
+  // {
+  //   id: 4,
+  //   type: 'workshop',
+  //   title: 'Intensive: Aye Hairathe Aashiqui',
+  //   image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Jan 12',
+  //   time: '2:00PM - 4:00PM',
+  //   location: 'Good Move Studios, Koramangala',
+  //   locationUrl: 'https://g.co/kgs/BYH4hS8',
+  //   locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+  //   instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
+  //   categories: ['Workshops', 'Dance'],
+  //   featured: false,
+  //   description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
+  //   price: '₹499',
+  //   faqs: [
+  //     {
+  //       question: 'Do I need prior dance experience?',
+  //       answer: 'No prior experience needed.'
+  //     },
+  //     {
+  //       question: 'What should I wear?',
+  //       answer: 'Wear comfortable clothing.'
+  //     }
+  //   ],
+  //   studioGuidelines: [
+  //     'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+  //     'Arrive 10 minutes before the scheduled start time',
+  //     'Carry a water bottle with you.'
+  //   ],
+  //   ticketCategories: [
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 600,
+  //       description: 'Standard admission ticket',
+  //       enabled: true,
+  //       bookingLink: 'https://ticketing.example.com/summer-fest/regular'
+  //     }
+  //   ]
+  // },
   {
     id: 4,
     type: 'workshop',
@@ -167,7 +208,7 @@ export const workshops: Workshop[] = [
     locationDescription: '7, 2nd Floor, Kothnur Main Rd, RBI Layout, JP Nagar 7th Phase',
     instagramStoryUrl: 'https://www.instagram.com/p/DEpIwRYy-5F/',
     categories: ['Workshops', 'Dance'],
-    description: 'Silhouette program\nThis is actually a 4 session program (last session will be of 2 hours for individual shoot)\nWhat to expect:-\n1)Basics of classical dance. Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot',
+    description: 'This is actually a 4 session program (last session will be of 2 hours for individual shoot.\nWhat to expect:-\n1)Basics of classical dance Mudras ,steps will be taught so you can recreate on any song.\n2) Entire Choreo.\n3) Individual Shoot\n\n18,19,25 January: 3:00-4:15PM - Danzelle studio\n🌈❤️Last day shoot\n26th January: 2:00-4:00PM - Good Move Studio',
     price: '₹2600',
     faqs: [
       {
@@ -263,10 +304,14 @@ export const workshops: Workshop[] = [
     locationDescription: '80 Feet Rd, next to Akshaya Motors Mercedes Benz Showroom, 4th Block, Koramangala',
     instagramStoryUrl: 'https://www.instagram.com/p/DEwPpbwSIRk/',
     categories: ['Workshops', 'Art & Craft'],
-    description: 'Unwind and get creative at our cozy café pottery workshop! Enjoy the soothing charm of clay sculpting while sipping on your favorite drinks in a warm, sweet setting. Perfect for beginners and art lovers alike—come mold, shape, and craft your masterpiece!',
+    description: 'This workshop is an introduction to pottery we cover both wheel and hand building( sculpting).\n\ 🤩🤩At the end of the session you will have minimum of 2 products to take home.‼️‼️‼️',
     price: '₹1700',
     featured: true,
     faqs: [
+      {
+        question: 'Is it hand building or wheel building?',
+        answer: 'We will cover both.'
+      },
       {
         question: 'Do I need prior experience?',
         answer: 'No prior experience needed.'

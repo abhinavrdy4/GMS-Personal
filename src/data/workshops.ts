@@ -155,49 +155,57 @@ export const workshops: Workshop[] = [
       }
     ]
   },
-  // {
-  //   id: 4,
-  //   type: 'workshop',
-  //   title: 'Intensive: Aye Hairathe Aashiqui',
-  //   image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
-  //   date: 'Jan 12',
-  //   time: '2:00PM - 4:00PM',
-  //   location: 'Good Move Studios, Koramangala',
-  //   locationUrl: 'https://g.co/kgs/BYH4hS8',
-  //   locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-  //   instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
-  //   categories: ['Workshops', 'Dance'],
-  //   featured: false,
-  //   description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
-  //   price: '₹499',
-  //   faqs: [
-  //     {
-  //       question: 'Do I need prior dance experience?',
-  //       answer: 'No prior experience needed.'
-  //     },
-  //     {
-  //       question: 'What should I wear?',
-  //       answer: 'Wear comfortable clothing.'
-  //     }
-  //   ],
-  //   studioGuidelines: [
-  //     'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-  //     'Arrive 10 minutes before the scheduled start time',
-  //     'Carry a water bottle with you.'
-  //   ],
-  //   ticketCategories: [
-  //     {
-  //       id: 'regular',
-  //       name: 'Regular',
-  //       price: 600,
-  //       description: 'Standard admission ticket',
-  //       enabled: true,
-  //       bookingLink: 'https://ticketing.example.com/summer-fest/regular'
-  //     }
-  //   ]
-  // },
   {
     id: 4,
+    type: 'workshop',
+    title: '2 Days Intensive: Aye Hairathe Aashiqui',
+    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Feb 8th & 9th',
+    time: '10:00AM - 12:00AM',
+    location: 'Good Move Studios, Koramangala',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+    instagramStoryUrl: 'https://www.instagram.com/p/DEh6kmxS3TC/',
+    categories: ['Workshops', 'Dance'],
+    featured: false,
+    description: '2 day intensive workshop on 🎵 Aye Hairathe Aashiqui.\n\nWhat to expect:\n👉🏻Detailed breakdown of the choreo\n👉🏻 Focus on posture & body language\n👉🏻 Fundamentals of classical dance steps used in choreo\n👉🏻 Special focus on Navras/bhav or expressions\n\nOverall tips & tricks to enhance your dance & to create a choreo.',
+    price: '₹1299',
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear comfortable ethnic wear.'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 999,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/NV7QNixp'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 1299,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/NV7QNixp'
+      }
+    ]
+  },
+  {
+    id: 5,
     type: 'workshop',
     title: 'Saiyaan Silhouette Workshop',
     image: 'https://storage.googleapis.com/cityvibe/Silhouette.PNG?auto=format&fit=crop&w=600&q=80',
@@ -253,7 +261,7 @@ export const workshops: Workshop[] = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     type: 'workshop',
     title: 'Peelings from Surya: A Tollywood Dance Workshop',
     image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
@@ -293,7 +301,7 @@ export const workshops: Workshop[] = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     type: 'workshop',
     title: 'Pottery Workshop',
     image: 'https://storage.googleapis.com/cityvibe/pottery.PNG?auto=format&fit=crop&w=600&q=80',
@@ -332,11 +340,11 @@ export const workshops: Workshop[] = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     type: 'workshop',
     title: 'Bhangra Dance Workshop',
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 12',
+    date: 'Jan 26',
     time: '2:00PM - 4:00PM',
     location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
@@ -345,7 +353,7 @@ export const workshops: Workshop[] = [
     categories: ['Workshops', 'Dance'],
     featured: false,
     description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
-    price: '₹499',
+    price: '₹600',
     faqs: [
       {
         question: 'Do I need prior dance experience?',
@@ -363,12 +371,20 @@ export const workshops: Workshop[] = [
     ],
     ticketCategories: [
       {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 600,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/l/gmsbhangra'
+      },
+      {
         id: 'regular',
         name: 'Regular',
-        price: 600,
+        price: 700,
         description: 'Standard admission ticket',
         enabled: true,
-        bookingLink: 'https://ticketing.example.com/summer-fest/regular'
+        bookingLink: 'https://rzp.io/l/gmsbhangra'
       }
     ]
   },

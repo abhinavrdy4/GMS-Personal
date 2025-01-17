@@ -1,4 +1,4 @@
-import { Shuffle, ToyBrick, Dumbbell, Palette, Repeat, Music4 } from 'lucide-react';
+import { Shuffle, ToyBrick, Dumbbell, Palette, Repeat, Music4, SquareStack } from 'lucide-react';
 import type { Category } from '../types/categories';
 
 export const categories: Category[] = [
@@ -8,4 +8,5 @@ export const categories: Category[] = [
 { name: 'Kids', icon: ToyBrick, color: 'from-red-500 to-pink-500', gradient: 'red-to-pink', type: 'event' },
 { name: 'Fitness', icon: Dumbbell, color: 'from-blue-500 to-cyan-500', gradient: 'blue-to-cyan', type: 'event' },
 { name: 'Art & Craft', icon: Palette, color: 'from-pink-500 to-rose-500', gradient: 'pink-to-rose', type: 'event' },
+{ name: 'Others', icon: SquareStack, color: 'from-teal-500 to-cyan-500', gradient: 'teal-to-cyan', type: 'event' },
 ];

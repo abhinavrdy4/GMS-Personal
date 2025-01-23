@@ -109,7 +109,7 @@ export const workshops: Workshop[] = [
     location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    // instagramStoryUrl: 'https://www.instagram.com/p/DFDkTAmSXki/',
+    instagramStoryUrl: 'https://www.instagram.com/p/DFE_7oCyenK/',
     categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Join Nitin and Ananya as they bring the charm of Inkem Inkem to life with a stunning Bharatanatyam routine, blending elegance, expression, and classical precision.',

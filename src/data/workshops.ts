@@ -60,7 +60,7 @@ export const workshops: Workshop[] = [
     location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DFDkTAmSXki/',
+    instagramStoryUrl: 'https://www.instagram.com/p/DFHixk5Sekt/',
     categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Step into the enchanting world of Bollywood with Ashish as he brings the romantic vibes of "Dagabaaz Re" to life! Learn graceful, expressive choreography that blends elegance with subtle emotions. Perfect for dance enthusiasts of all levels, this session is your chance to master soulful moves while enjoying a timeless Bollywood classic.',

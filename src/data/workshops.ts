@@ -4,161 +4,14 @@ export const workshops: Workshop[] = [
   {
     id: 1,
     type: 'workshop',
-    title: 'Choreography Workshop On Aankh',
-    image: 'https://storage.googleapis.com/cityvibe/priti.jpeg?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 26',
-    time: '6:00PM - 8:00PM',
-    location: 'Good Move Studios, Koramangala',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DFA0zlLSaRv/',
-    categories: ['Workshops', 'Dance'],
-    featured: true,
-    description: 'Join Priti for an exhilarating Bollywood-style choreography dance workshop! Dive into the vibrant world of Bollywood with high-energy moves, expressive storytelling, and dynamic rhythms. Perfect for all skill levels, this workshop combines fitness, fun, and creative expression. Come groove to catchy beats and experience the magic of Bollywood dance!',
-    price: '₹599',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear comfortable clothing.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 599,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/CmpptVU'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 699,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/CmpptVU'
-      }
-    ]
-  },
-  {
-    id: 2,
-    type: 'workshop',
-    title: 'Choreography With Ashish: Dagabaaz Re ',
-    image: 'https://storage.googleapis.com/cityvibe/ashish.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Feb 2',
-    time: '12:00PM - 2:00PM',
-    location: 'Good Move Studios, Koramangala',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DFHixk5Sekt/',
-    categories: ['Workshops', 'Dance'],
-    featured: true,
-    description: 'Step into the enchanting world of Bollywood with Ashish as he brings the romantic vibes of "Dagabaaz Re" to life! Learn graceful, expressive choreography that blends elegance with subtle emotions. Perfect for dance enthusiasts of all levels, this session is your chance to master soulful moves while enjoying a timeless Bollywood classic.',
-    price: '₹599',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear comfortable clothing.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 750,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/JkCLoCrv'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 850,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/JkCLoCrv'
-      }
-    ]
-  },
-  {
-    id: 3,
-    type: 'workshop',
-    title: 'Inkem Inkem The Bharatnatyam Routine',
-    image: 'https://storage.googleapis.com/cityvibe/ananya%26nitin.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Feb 1',
-    time: '4:30PM - 6:30PM',
-    location: 'Good Move Studios, Koramangala',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DFE_7oCyenK/',
-    categories: ['Workshops', 'Dance'],
-    featured: true,
-    description: 'Join Nitin and Ananya as they bring the charm of Inkem Inkem to life with a stunning Bharatanatyam routine, blending elegance, expression, and classical precision.',
-    price: '₹599',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear comfortable clothing.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 699,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/5FjtLzKB'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 799,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/5FjtLzKB'
-      }
-    ]
-  },
-  {
-    id: 4,
-    type: 'workshop',
     title: 'Bhangra Dance Workshop',
     image: 'https://storage.googleapis.com/cityvibe/IMG_8633.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 26',
+    date: 'Feb 9',
     time: '2:00PM - 4:00PM',
     location: 'Good Move Studios, Koramangala',
     locationUrl: 'https://g.co/kgs/BYH4hS8',
     locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DEe1nIvywJ-/',
+    instagramStoryUrl: 'https://www.instagram.com/p/DFhGRBsSeRs/',
     categories: ['Workshops', 'Dance'],
     featured: true,
     description: 'Learn the high-energy traditional dance form of Bhangra! Perfect for beginners and dance enthusiasts, this workshop will get your heart pumping and feet moving.',
@@ -198,56 +51,7 @@ export const workshops: Workshop[] = [
     ]
   },
   {
-    id: 5,
-    type: 'workshop',
-    title: 'Bolna Halke Halke – Semi-Classical Workshop',
-    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
-    date: 'Jan 26',
-    time: '4:00PM - 6:00PM',
-    location: 'Good Move Studios, Koramangala',
-    locationUrl: 'https://g.co/kgs/BYH4hS8',
-    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
-    instagramStoryUrl: 'https://www.instagram.com/p/DE7lgO2ye1_/',
-    categories: ['Workshops', 'Dance'],
-    featured: false,
-    description: 'Immerse yourself in the graceful moves of Bolna Halke Halke with this semi-classical workshop. Perfect for all levels, explore elegant expressions and fluid choreography in a soulful setting.',
-    price: '₹599',
-    faqs: [
-      {
-        question: 'Do I need prior dance experience?',
-        answer: 'No prior experience needed.'
-      },
-      {
-        question: 'What should I wear?',
-        answer: 'Wear comfortable clothing.'
-      }
-    ],
-    studioGuidelines: [
-      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
-      'Arrive 10 minutes before the scheduled start time',
-      'Carry a water bottle with you.'
-    ],
-    ticketCategories: [
-      {
-        id: 'early-bird',
-        name: 'Early Bird',
-        price: 599,
-        description: 'Limited early bird tickets at a special price',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/L9h6SvN'
-      },
-      {
-        id: 'regular',
-        name: 'Regular',
-        price: 699,
-        description: 'Standard admission ticket',
-        enabled: true,
-        bookingLink: 'https://rzp.io/rzp/L9h6SvN'
-      }
-    ]
-  },
-  {
-    id: 6,
+    id: 2,
     type: 'workshop',
     title: '2 Days Intensive: Aye Hairathe Aashiqui',
     image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
@@ -295,6 +99,251 @@ export const workshops: Workshop[] = [
       }
     ]
   },
+  {
+    id: 3,
+    type: 'workshop',
+    title: 'Choreography Workshop On Pranavalaya with Dr. Srija',
+    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Feb 9',
+    time: '4:30PM - 6:30PM',
+    location: 'Good Move Studios, Koramangala',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+    instagramStoryUrl: 'https://www.instagram.com/p/DFo0E18SXcu/',
+    categories: ['Workshops', 'Dance'],
+    featured: true,
+    description: 'Experience the divine synergy of movement and melody in this Bharatanatyam choreography workshop led by the esteemed Dr. Srija. Centered around the soulful composition Pranavalaya, this session delves into intricate footwork, expressive abhinaya, and dynamic rhythmic patterns. Open to dancers of all levels, the workshop offers a unique opportunity to explore the depth of Bharatanatyam while bringing the spiritual essence of Pranavalaya to life through dance.',
+    price: '₹599',
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear ethnic clothing.'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 599,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/uI8iPCtc'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 699,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/uI8iPCtc'
+      }
+    ]
+  },
+  {
+    id: 4,
+    type: 'workshop',
+    title: 'Choreography Workshop On Uyi Amma',
+    image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
+    date: 'Feb 16',
+    time: '6:00PM - 8:00PM',
+    location: 'Good Move Studios, Koramangala',
+    locationUrl: 'https://g.co/kgs/BYH4hS8',
+    locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+    instagramStoryUrl: 'https://www.instagram.com/p/DFA0zlLSaRv/',
+    categories: ['Workshops', 'Dance'],
+    featured: true,
+    description: 'Join Priti for an exhilarating Bollywood-style choreography dance workshop! Dive into the vibrant world of Bollywood with high-energy moves, expressive storytelling, and dynamic rhythms. Perfect for all skill levels, this workshop combines fitness, fun, and creative expression. Come groove to catchy beats and experience the magic of Bollywood dance!',
+    price: '₹699',
+    faqs: [
+      {
+        question: 'Do I need prior dance experience?',
+        answer: 'No prior experience needed.'
+      },
+      {
+        question: 'What should I wear?',
+        answer: 'Wear comfortable clothing.'
+      }
+    ],
+    studioGuidelines: [
+      'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+      'Arrive 10 minutes before the scheduled start time',
+      'Carry a water bottle with you.'
+    ],
+    ticketCategories: [
+      {
+        id: 'early-bird',
+        name: 'Early Bird',
+        price: 599,
+        description: 'Limited early bird tickets at a special price',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/CmpptVU'
+      },
+      {
+        id: 'regular',
+        name: 'Regular',
+        price: 699,
+        description: 'Standard admission ticket',
+        enabled: true,
+        bookingLink: 'https://rzp.io/rzp/CmpptVU'
+      }
+    ]
+  },
+  // {
+  //   id: 3,
+  //   type: 'workshop',
+  //   title: 'Inkem Inkem The Bharatnatyam Routine',
+  //   image: 'https://storage.googleapis.com/cityvibe/ananya%26nitin.PNG?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Feb 1',
+  //   time: '4:30PM - 6:30PM',
+  //   location: 'Good Move Studios, Koramangala',
+  //   locationUrl: 'https://g.co/kgs/BYH4hS8',
+  //   locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+  //   instagramStoryUrl: 'https://www.instagram.com/p/DFE_7oCyenK/',
+  //   categories: ['Workshops', 'Dance'],
+  //   featured: true,
+  //   description: 'Join Nitin and Ananya as they bring the charm of Inkem Inkem to life with a stunning Bharatanatyam routine, blending elegance, expression, and classical precision.',
+  //   price: '₹599',
+  //   faqs: [
+  //     {
+  //       question: 'Do I need prior dance experience?',
+  //       answer: 'No prior experience needed.'
+  //     },
+  //     {
+  //       question: 'What should I wear?',
+  //       answer: 'Wear comfortable clothing.'
+  //     }
+  //   ],
+  //   studioGuidelines: [
+  //     'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+  //     'Arrive 10 minutes before the scheduled start time',
+  //     'Carry a water bottle with you.'
+  //   ],
+  //   ticketCategories: [
+  //     {
+  //       id: 'early-bird',
+  //       name: 'Early Bird',
+  //       price: 699,
+  //       description: 'Limited early bird tickets at a special price',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/5FjtLzKB'
+  //     },
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 799,
+  //       description: 'Standard admission ticket',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/5FjtLzKB'
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 5,
+  //   type: 'workshop',
+  //   title: 'Bolna Halke Halke – Semi-Classical Workshop',
+  //   image: 'https://storage.googleapis.com/cityvibe/logo.PNG?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Jan 26',
+  //   time: '4:00PM - 6:00PM',
+  //   location: 'Good Move Studios, Koramangala',
+  //   locationUrl: 'https://g.co/kgs/BYH4hS8',
+  //   locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+  //   instagramStoryUrl: 'https://www.instagram.com/p/DE7lgO2ye1_/',
+  //   categories: ['Workshops', 'Dance'],
+  //   featured: false,
+  //   description: 'Immerse yourself in the graceful moves of Bolna Halke Halke with this semi-classical workshop. Perfect for all levels, explore elegant expressions and fluid choreography in a soulful setting.',
+  //   price: '₹599',
+  //   faqs: [
+  //     {
+  //       question: 'Do I need prior dance experience?',
+  //       answer: 'No prior experience needed.'
+  //     },
+  //     {
+  //       question: 'What should I wear?',
+  //       answer: 'Wear comfortable clothing.'
+  //     }
+  //   ],
+  //   studioGuidelines: [
+  //     'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+  //     'Arrive 10 minutes before the scheduled start time',
+  //     'Carry a water bottle with you.'
+  //   ],
+  //   ticketCategories: [
+  //     {
+  //       id: 'early-bird',
+  //       name: 'Early Bird',
+  //       price: 599,
+  //       description: 'Limited early bird tickets at a special price',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/L9h6SvN'
+  //     },
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 699,
+  //       description: 'Standard admission ticket',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/L9h6SvN'
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 2,
+  //   type: 'workshop',
+  //   title: 'Choreography With Ashish: Dagabaaz Re ',
+  //   image: 'https://storage.googleapis.com/cityvibe/ashish.PNG?auto=format&fit=crop&w=600&q=80',
+  //   date: 'Feb 2',
+  //   time: '12:00PM - 2:00PM',
+  //   location: 'Good Move Studios, Koramangala',
+  //   locationUrl: 'https://g.co/kgs/BYH4hS8',
+  //   locationDescription: 'Located on 80 Feet Road, Koramangala, opposite Pasta Street, in the same building as RBL Bank, on the 3rd floor.',
+  //   instagramStoryUrl: 'https://www.instagram.com/p/DFHixk5Sekt/',
+  //   categories: ['Workshops', 'Dance'],
+  //   featured: true,
+  //   description: 'Step into the enchanting world of Bollywood with Ashish as he brings the romantic vibes of "Dagabaaz Re" to life! Learn graceful, expressive choreography that blends elegance with subtle emotions. Perfect for dance enthusiasts of all levels, this session is your chance to master soulful moves while enjoying a timeless Bollywood classic.',
+  //   price: '₹599',
+  //   faqs: [
+  //     {
+  //       question: 'Do I need prior dance experience?',
+  //       answer: 'No prior experience needed.'
+  //     },
+  //     {
+  //       question: 'What should I wear?',
+  //       answer: 'Wear comfortable clothing.'
+  //     }
+  //   ],
+  //   studioGuidelines: [
+  //     'Outdoor shoes are not allowed. Carry a clean pair of shoes.',
+  //     'Arrive 10 minutes before the scheduled start time',
+  //     'Carry a water bottle with you.'
+  //   ],
+  //   ticketCategories: [
+  //     {
+  //       id: 'early-bird',
+  //       name: 'Early Bird',
+  //       price: 750,
+  //       description: 'Limited early bird tickets at a special price',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/JkCLoCrv'
+  //     },
+  //     {
+  //       id: 'regular',
+  //       name: 'Regular',
+  //       price: 850,
+  //       description: 'Standard admission ticket',
+  //       enabled: true,
+  //       bookingLink: 'https://rzp.io/rzp/JkCLoCrv'
+  //     }
+  //   ]
+  // },
   // {
   //   id: 5,
   //   type: 'workshop',

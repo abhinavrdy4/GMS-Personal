@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Menu, X } from 'lucide-react';
 import { useSearch } from '../contexts/SearchContext';
+import { Footer } from './Footer';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f5f5] via-[#f0f2f0] to-[#eaeaea]">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#fcfcfc] via-[#f8f9fa] to-[#f1f3f5]">
       <nav className="fixed top-0 w-full glass-card shadow-lg z-50 h-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           <div className="flex justify-between items-center h-full">
@@ -72,9 +73,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         )}
       </nav>
-      <main className="pt-16">
+      <main className="flex-grow pt-16">
         {children}
       </main>
+      <Footer />
     </div>
   );
 };
